@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>About Us | Sahyadri Enterprises - Frozen Food & Global Export Solutions</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G82D3PQWJL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G82D3PQWJL');
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    
+    /* WhatsApp float button - EXACT same as your old code */
+    .whatsapp-float { 
+      position: fixed; 
+      bottom: 28px; 
+      right: 28px; 
+      background: linear-gradient(135deg, #25D366, #128C7E); 
+      color: white; 
+      border-radius: 60px; 
+      padding: 12px 24px; 
+      display: flex; 
+      align-items: center; 
+      gap: 12px; 
+      font-weight: 700; 
+      z-index: 99; 
+      text-decoration: none; 
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25); 
+      transition: transform 0.2s;
+    }
+    .whatsapp-float:hover { transform: scale(1.05); }
+    @media (max-width: 580px) { 
+      .whatsapp-float span { display: none; } 
+      .whatsapp-float { padding: 12px; border-radius: 50%; } 
+    }
+    
+    /* EXACT BLACK NAVIGATION BAR STYLES - as per original code */
+    .black-navbar {
+      background-color: #000000 !important;
+    }
+    .nav-link {
+      color: #ffffff !important;
+      transition: all 0.2s ease;
+      font-weight: 500;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+    }
+    .nav-link:hover {
+      color: #fbbf24 !important;
+      border-bottom-color: #fbbf24;
+    }
+    .nav-link-active {
+      border-bottom: 2px solid #fbbf24;
+      color: #fbbf24 !important;
+      font-weight: 600;
+    }
+    .mobile-menu-black {
+      background-color: #000000 !important;
+    }
+    .mobile-menu-black a {
+      color: #ffffff !important;
+      font-weight: 500;
+    }
+    .mobile-menu-black a:hover {
+      color: #fbbf24 !important;
+      padding-left: 4px;
+    }
+    .black-navbar {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    
+    /* Professional card styling */
+    .feature-card {
+      border: 1px solid #eef2f0;
+      transition: all 0.25s ease;
+    }
+    .feature-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="sticky top-0 z-50 black-navbar shadow-md">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <!-- Logo / Brand Name -->
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-2">
+          <h1 class="text-2xl md:text-3xl font-extrabold text-white">Sahyadri <span class="text-amber-400">Enterprises</span></h1>
+        </a>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-8 font-medium">
+        <a href="index.html" class="nav-link transition">Home</a>
+        <a href="products.html" class="nav-link transition">Products</a>
+        <a href="about.html" class="nav-link nav-link-active transition">About Us</a>
+        <a href="contact.html" class="nav-link transition">Contact</a>
+      </nav>
+      
+      <!-- Mobile menu button -->
+      <button id="mobileMenuBtn" class="md:hidden text-2xl text-white focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden mobile-menu-black border-t border-gray-700 px-6 pb-5 pt-3 flex flex-col gap-3">
+      <a href="index.html" class="py-2 text-white hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-home w-5"></i> Home</a>
+      <a href="products.html" class="py-2 text-white hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-boxes w-5"></i> Products</a>
+      <a href="about.html" class="py-2 text-amber-400 transition flex items-center gap-2"><i class="fas fa-info-circle w-5"></i> About Us</a>
+      <a href="contact.html" class="py-2 text-white hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-envelope w-5"></i> Contact</a>
+    </div>
+  </header>
+
+  <!-- ========== HERO - FROM YOUR FARM TO THE WORLD ========== -->
+  <section class="relative bg-gray-900 text-white py-20 lg:py-28">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80')] bg-cover bg-center bg-no-repeat opacity-30"></div>
+    <div class="container mx-auto px-6 relative z-10 text-center max-w-5xl">
+      <div class="inline-block bg-amber-600/20 backdrop-blur-sm px-4 py-1 rounded-full text-amber-300 text-sm font-medium mb-5">Global Trade Facilitator</div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">From Your Farm <span class="text-amber-500">To The World</span></h1>
+      <p class="text-xl md:text-2xl text-gray-200 mt-4 max-w-3xl mx-auto">We connect you to verified global buyers with complete export support.</p>
+      <div class="flex flex-wrap justify-center gap-4 mt-8">
+        <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-2 rounded-full text-sm"><i class="fas fa-check-circle text-amber-400"></i> Verified Buyers</div>
+        <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-2 rounded-full text-sm"><i class="fas fa-globe text-amber-400"></i> Global Reach</div>
+        <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-2 rounded-full text-sm"><i class="fas fa-handshake text-amber-400"></i> Trusted Network</div>
+        <div class="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-5 py-2 rounded-full text-sm"><i class="fas fa-shield-alt text-amber-400"></i> Quality Assurance</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPORT ASSISTANCE + PRODUCT LIST ========== -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <div class="text-amber-600 font-semibold text-sm uppercase tracking-wide mb-3">Export Solutions</div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-5">We Help You Export</h2>
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-3"><i class="fas fa-apple-alt text-amber-600 w-6 text-lg"></i><span class="text-gray-700 font-medium">Fresh Fruits & Vegetables</span></div>
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-3"><i class="fas fa-seedling text-amber-600 w-6 text-lg"></i><span class="text-gray-700 font-medium">Cashews, Nuts & Pulses</span></div>
+            <div class="flex items-center gap-3 border-b border-gray-100 pb-3"><i class="fas fa-wheat-alt text-amber-600 w-6 text-lg"></i><span class="text-gray-700 font-medium">Grains & Cereals</span></div>
+            <div class="flex items-center gap-3"><i class="fas fa-plus-circle text-amber-600 w-6 text-lg"></i><span class="text-gray-700 font-medium">Frozen Snacks, Purees & More</span></div>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-amber-500">
+            <p class="font-semibold text-gray-800 text-lg">Ready to Export?</p>
+            <p class="text-gray-600 text-sm mb-4">We are just a call or message away — complete documentation & logistics.</p>
+            <div class="flex flex-wrap gap-4">
+              <a href="contact.html" class="bg-gray-900 hover:bg-gray-800 text-white px-6 py-2.5 rounded-md transition text-sm font-medium">Get in Touch →</a>
+              <a href="https://wa.me/919730519151?text=Hello%20Sahyadri%20Enterprises%2C%20I'm%20interested%20in%20global%20export%20buyers" class="border border-gray-300 text-gray-700 hover:border-amber-500 px-6 py-2.5 rounded-md transition text-sm font-medium">WhatsApp Enquiry</a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+          <div class="text-center mb-6">
+            <div class="text-4xl mb-2">🌾📦</div>
+            <h3 class="text-2xl font-bold text-gray-800">Do You Want Export?</h3>
+            <p class="text-gray-600 mt-1">Need Verified Buyers From Overseas</p>
+          </div>
+          <button onclick="window.location.href='contact.html'" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 rounded-md transition">Apply Now →</button>
+          <div class="grid grid-cols-2 gap-4 mt-8 pt-4 border-t border-gray-200">
+            <div class="flex items-center gap-2 text-sm text-gray-700"><i class="fas fa-user-check text-amber-600 w-4"></i> Verified Buyers</div>
+            <div class="flex items-center gap-2 text-sm text-gray-700"><i class="fas fa-globe text-amber-600 w-4"></i> Global Reach</div>
+            <div class="flex items-center gap-2 text-sm text-gray-700"><i class="fas fa-handshake text-amber-600 w-4"></i> Trusted Network</div>
+            <div class="flex items-center gap-2 text-sm text-gray-700"><i class="fas fa-medal text-amber-600 w-4"></i> Quality Assurance</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LET'S GROW TOGETHER BANNER ========== -->
+  <div class="bg-amber-50 py-6 border-y border-amber-200">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-xl md:text-2xl font-semibold text-gray-800"><i class="fas fa-leaf text-amber-600 mr-2"></i> Let's Grow Together. Let's Export Together. <i class="fas fa-handshake text-amber-600 ml-2"></i></p>
+    </div>
+  </div>
+
+  <!-- ========== ABOUT SAHYADRI ENTERPRISES ========== -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="text-center mb-12">
+        <span class="text-amber-600 text-sm uppercase tracking-wide">Our Story</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">About Sahyadri Enterprises</h2>
+        <div class="w-16 h-0.5 bg-amber-500 mx-auto mt-4"></div>
+      </div>
+      <div class="space-y-6 text-gray-600 leading-relaxed text-base">
+        <p>Sahyadri Enterprises is a trusted supplier of premium frozen food products and a dedicated export facilitator. We specialize in delivering high-quality frozen fruits and vegetables while maintaining freshness, hygiene, and international quality standards. Our mission is to provide fresh taste with advanced freezing technology and reliable cold-chain supply.</p>
+        <p>Beyond frozen foods, we bridge the gap between Indian farmers, producers, and verified global buyers. With a strong network across international markets, we ensure seamless export of agricultural commodities including fresh produce, nuts, pulses, grains, and cereals.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 mt-12">
+        <div class="bg-gray-50 p-6 rounded-xl">
+          <i class="fas fa-eye text-amber-600 text-2xl mb-3 block"></i>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Our Vision</h3>
+          <p class="text-gray-600">To become India's most trusted frozen food supplier and global trade connector, empowering local producers to access international markets with uncompromised quality.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-xl">
+          <i class="fas fa-bullseye text-amber-600 text-2xl mb-3 block"></i>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Our Mission</h3>
+          <ul class="list-disc list-inside text-gray-600 space-y-1">
+            <li>Deliver premium frozen foods across India & global markets</li>
+            <li>Maintain highest hygiene & safety standards (FSSAI, HACCP)</li>
+            <li>Ensure 100% customer satisfaction & end-to-end export assistance</li>
+            <li>Connect Indian producers to verified buyers worldwide</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INFRASTRUCTURE ========== -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 text-center max-w-6xl">
+      <span class="text-amber-600 text-sm uppercase tracking-wide">Infrastructure</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">State-of-the-Art Facilities</h2>
+      <p class="text-gray-500 mb-12 max-w-2xl mx-auto">Cold storage, IQF processing, and hygienic packaging under one roof.</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 feature-card">
+          <div class="w-14 h-14 bg-amber-100 rounded-lg flex items-center justify-center mx-auto mb-5"><i class="fas fa-temperature-low text-amber-700 text-2xl"></i></div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Cold Storage</h3>
+          <p class="text-gray-500 text-sm">-18°C maintained facilities with 5000+ MT capacity for optimal freshness.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 feature-card">
+          <div class="w-14 h-14 bg-amber-100 rounded-lg flex items-center justify-center mx-auto mb-5"><i class="fas fa-microscope text-amber-700 text-2xl"></i></div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Processing Unit</h3>
+          <p class="text-gray-500 text-sm">IQF technology with HACCP certified processes ensuring quality retention.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 feature-card">
+          <div class="w-14 h-14 bg-amber-100 rounded-lg flex items-center justify-center mx-auto mb-5"><i class="fas fa-box-open text-amber-700 text-2xl"></i></div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Packaging Unit</h3>
+          <p class="text-gray-500 text-sm">Hygienic vacuum and aseptic packaging lines for global compliance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHY CHOOSE US ========== -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 max-w-6xl">
+      <div class="text-center mb-12">
+        <span class="text-amber-600 text-sm uppercase tracking-wide">Why Sahyadri</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Why Choose Us?</h2>
+        <div class="w-16 h-0.5 bg-amber-500 mx-auto mt-4"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="flex gap-4 items-start">
+          <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-certificate text-amber-700"></i></div>
+          <div><h3 class="font-bold text-gray-800 mb-1">Premium Quality</h3><p class="text-gray-500 text-sm">IQF technology, farm-fresh taste, no preservatives.</p></div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-truck-fast text-amber-700"></i></div>
+          <div><h3 class="font-bold text-gray-800 mb-1">Fast Logistics</h3><p class="text-gray-500 text-sm">Pan India delivery with dedicated refrigerated fleet.</p></div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-hand-holding-usd text-amber-700"></i></div>
+          <div><h3 class="font-bold text-gray-800 mb-1">Wholesale Pricing</h3><p class="text-gray-500 text-sm">Best rates for bulk orders & repeated supplies.</p></div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-clinic-medical text-amber-700"></i></div>
+          <div><h3 class="font-bold text-gray-800 mb-1">Hygienic Processing</h3><p class="text-gray-500 text-sm">FSSAI approved, state-of-the-art facility.</p></div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-globe text-amber-700"></i></div>
+          <div><h3 class="font-bold text-gray-800 mb-1">Export Ready</h3><p class="text-gray-500 text-sm">Compliant with international quality standards & buyer network.</p></div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-headset text-amber-700"></i></div>
+          <div><h3 class="font-bold text-gray-800 mb-1">24/7 Support</h3><p class="text-gray-500 text-sm">Dedicated customer service for all your queries.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPORT PORTFOLIO ========== -->
+  <section class="py-14 bg-gray-50 border-t border-gray-200">
+    <div class="container mx-auto px-6 text-center max-w-5xl">
+      <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Global Export Portfolio</h3>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="bg-white px-5 py-2 rounded-full text-sm font-medium text-gray-700 shadow-sm border border-gray-200">Fresh Fruits & Vegetables</span>
+        <span class="bg-white px-5 py-2 rounded-full text-sm font-medium text-gray-700 shadow-sm border border-gray-200">Cashews Nuts & Pulses</span>
+        <span class="bg-white px-5 py-2 rounded-full text-sm font-medium text-gray-700 shadow-sm border border-gray-200">Grains & Cereals</span>
+        <span class="bg-white px-5 py-2 rounded-full text-sm font-medium text-gray-700 shadow-sm border border-gray-200">Frozen Snacks & More</span>
+      </div>
+      <p class="text-gray-500 text-sm mt-6">Connect with verified overseas importers — hassle-free documentation & quality compliance.</p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-green-900 text-white pt-14 pb-8">
+    <div class="container mx-auto px-6 grid md:grid-cols-4 gap-10">
+      <div><i class="fas fa-snowflake text-2xl text-amber-400 mb-3 block"></i><h3 class="text-xl font-bold">Sahyadri Enterprises</h3><p class="text-green-200 text-sm mt-2">Wholesale frozen food experts & export facilitators since 2025.</p><p class="text-green-200 text-sm mt-1">From Your Farm → To The World</p></div>
+      <div><h4 class="font-bold text-lg mb-3">Quick Links</h4><ul class="space-y-2 text-green-200"><li><a href="index.html" class="hover:text-amber-300">Home</a></li><li><a href="products.html" class="hover:text-amber-300">Products</a></li><li><a href="about.html" class="hover:text-amber-300">About</a></li><li><a href="contact.html" class="hover:text-amber-300">Contact</a></li></ul></div>
+      <div><h4 class="font-bold text-lg mb-3">Contact</h4><p class="text-green-200"><i class="fas fa-phone mr-2"></i> +91 9730519151</p><p class="text-green-200"><i class="fas fa-envelope mr-2"></i> sahyadrienterprises360@gmail.com</p><p class="text-green-200 text-sm mt-2"><i class="fas fa-clock mr-2"></i> 24 Hours</p></div>
+      <div><h4 class="font-bold text-lg mb-3">Follow Us</h4><div class="flex gap-4 text-2xl"><i class="fab fa-facebook hover:text-amber-400 cursor-pointer"></i><i class="fab fa-instagram hover:text-amber-400 cursor-pointer"></i></div><div class="mt-4 text-green-200 text-sm"><i class="fas fa-check-circle text-amber-400"></i> Verified Global Buyers Network</div></div>
+    </div>
+    <div class="text-center text-green-300 text-sm border-t border-green-800 mt-10 pt-6">© 2025 Sahyadri Enterprises – Premium Frozen Food Wholesaler & Export Connector. All rights reserved.</div>
+  </footer>
+
+  <!-- WhatsApp Button - EXACT same as your old code with gradient and hover -->
+  <a href="https://wa.me/919730519151?text=Hello%20Sahyadri%20Enterprises%2C%20I'm%20interested%20in%20bulk%20frozen%20products%20or%20global%20export%20buyers." class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp fa-2x"></i><span> Enquire on WhatsApp</span>
+  </a>
+
+  <script>
+    // Mobile menu toggle - exactly as original
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if(menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      
+      // Close mobile menu when clicking a link
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+  </script>
+</body>
+</html>

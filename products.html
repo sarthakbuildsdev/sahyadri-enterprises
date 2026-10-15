@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Frozen Products | Sahyadri Enterprises - Wholesale Frozen Foods</title>
+  <meta name="description" content="Browse our complete range of premium frozen products including frozen fruits, vegetables, pulps, ready-to-cook, snacks, momos, bakery, parathas, fresh produce and non-veg items. Wholesale frozen food supplier in India.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G82D3PQWJL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G82D3PQWJL');
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    .product-card { transition: all 0.35s ease; cursor: pointer; }
+    .product-card:hover { transform: translateY(-8px); box-shadow: 0 25px 35px -12px rgba(0,0,0,0.2); }
+    .whatsapp-float { position: fixed; bottom: 28px; right: 28px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; border-radius: 60px; padding: 12px 24px; display: flex; align-items: center; gap: 12px; font-weight: 700; z-index: 99; text-decoration: none; box-shadow: 0 10px 20px rgba(0,0,0,0.25); }
+    .whatsapp-float:hover { transform: scale(1.05); }
+    @media (max-width: 580px) { .whatsapp-float span { display: none; } .whatsapp-float { padding: 12px; border-radius: 50%; } }
+    .category-title { background: linear-gradient(135deg, #166534, #15803d); display: inline-block; }
+    .product-img { width: 100%; height: 100%; object-fit: cover; }
+    
+    /* Black Navigation Bar Styles */
+    .black-navbar { background-color: #000000 !important; }
+    .nav-link { color: #ffffff !important; transition: all 0.2s ease; font-weight: 500; padding-bottom: 4px; border-bottom: 2px solid transparent; }
+    .nav-link:hover { color: #fbbf24 !important; border-bottom-color: #fbbf24; }
+    .nav-link-active { border-bottom: 2px solid #fbbf24; color: #fbbf24 !important; font-weight: 600; }
+    .mobile-menu-black { background-color: #000000 !important; }
+    .mobile-menu-black a { color: #ffffff !important; font-weight: 500; }
+    .mobile-menu-black a:hover { color: #fbbf24 !important; padding-left: 4px; }
+    .black-navbar { box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+  </style>
+</head>
+<body>
+
+  <!-- BLACK NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 black-navbar shadow-md">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-2">
+          <h1 class="text-2xl md:text-3xl font-extrabold text-white">Sahyadri <span class="text-amber-400">Enterprises</span></h1>
+        </a>
+      </div>
+      <nav class="hidden md:flex space-x-8 font-medium">
+        <a href="index.html" class="nav-link transition">Home</a>
+        <a href="products.html" class="nav-link nav-link-active transition">Products</a>
+        <a href="about.html" class="nav-link transition">About Us</a>
+        <a href="contact.html" class="nav-link transition">Contact</a>
+      </nav>
+      <button id="mobileMenuBtn" class="md:hidden text-2xl text-white focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden mobile-menu-black border-t border-gray-700 px-6 pb-5 pt-3 flex flex-col gap-3">
+      <a href="index.html" class="py-2 text-white hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-home w-5"></i> Home</a>
+      <a href="products.html" class="py-2 text-amber-400 transition flex items-center gap-2"><i class="fas fa-boxes w-5"></i> Products</a>
+      <a href="about.html" class="py-2 text-white hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-info-circle w-5"></i> About Us</a>
+      <a href="contact.html" class="py-2 text-white hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-envelope w-5"></i> Contact</a>
+    </div>
+  </header>
+
+  <section class="py-24 bg-gradient-to-b from-gray-50 to-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-14">
+        <h2 class="text-4xl md:text-5xl font-bold text-green-800">Complete Frozen Range</h2>
+        <p class="text-gray-600 mt-3 max-w-2xl mx-auto">Click on any product to view detailed specifications, packaging options, and wholesale pricing</p>
+        <div class="w-32 h-0.5 bg-amber-400 mx-auto mt-4 rounded-full"></div>
+      </div>
+      
+      <!-- ============================================== -->
+      <!-- 1. FROZEN FRUITS (8 Products)                  -->
+      <!-- ============================================== -->
+      <div class="mb-16">
+        <div class="category-title px-6 py-2 rounded-full text-white font-bold mb-8">🍎 Frozen Fruits (8 Products)</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="fruitsGrid"></div>
+      </div>
+      
+      <!-- ============================================== -->
+      <!-- 2. FROZEN VEGETABLES (15 Products)             -->
+      <!-- ============================================== -->
+      <div class="mb-16">
+        <div class="category-title px-6 py-2 rounded-full text-white font-bold mb-8">🥦 Frozen Vegetables (15 Products)</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="vegetablesGrid"></div>
+      </div>
+      
+      <!-- ============================================== -->
+      <!-- 3. FROZEN PULPS & PUREES (6 Products)          -->
+      <!-- ============================================== -->
+      <div class="mb-16">
+        <div class="category-title px-6 py-2 rounded-full text-white font-bold mb-8">🥭 Frozen Pulps & Purees (6 Products)</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="pulpsGrid"></div>
+      </div>
+      
+      <!-- ============================================== -->
+      <!-- 4. FRESH PRODUCE (5 Products) - NEW            -->
+      <!-- ============================================== -->
+      <div class="mb-16">
+        <div class="category-title px-6 py-2 rounded-full text-white font-bold mb-8">🌱 Fresh Produce (5 Products)</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="freshProduceGrid"></div>
+      </div>
+      
+      <!-- ============================================== -->
+      <!-- 5. FROZEN MOMOS (7 Products) - NEW             -->
+      <!-- ============================================== -->
+      <div class="mb-16">
+        <div class="category-title px-6 py-2 rounded-full text-white font-bold mb-8">🥟 Frozen Momos (7 Products)</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="momosGrid"></div>
+      </div>
+      
+      <!-- ============================================== -->
+      <!-- 6. FROZEN BAKERY (5 Products) - NEW            -->
+      <!-- ============================================== -->
+      <div class="mb-16">
+        <div class="category-title px-6 py-2 rounded-full text-white font-bold mb-8">🥐 Frozen Bakery (5 Products)</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="bakeryGrid"></div>
+      </div>
+      
+      <!-- ============================================== -->
+      <!-- 7. PARATHAS & BREADS (9 Products) - NEW        -->
+      <!-- ============================================== -->
+      <div class="mb-16">
+        <div class="category-title px-6 py-2 rounded-full text-white font-bold mb-8">🫓 Parathas & Breads (9 Products)</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="parathasGrid"></div>
+      </div>
+      
+      <!-- ============================================== -->
+      <!-- 8. VEG SNACKS (5 Products) - NEW               -->
+      <!-- ============================================== -->
+      <div class="mb-16">
+        <div class="category-title px-6 py-2 rounded-full text-white font-bold mb-8">🍿 Veg Snacks (5 Products)</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="vegSnacksGrid"></div>
+      </div>
+      
+      <!-- ============================================== -->
+      <!-- 9. NON-VEG SNACKS (7 Products) - NEW           -->
+      <!-- ============================================== -->
+      <div class="mb-16">
+        <div class="category-title px-6 py-2 rounded-full text-white font-bold mb-8">🍗 Non-Veg Snacks (7 Products)</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="nonVegSnacksGrid"></div>
+      </div>
+      
+      <!-- ============================================== -->
+      <!-- 10. NON-VEG FROZEN PRODUCTS (12 Products)       -->
+      <!-- ============================================== -->
+      <div class="mb-16">
+        <div class="category-title px-6 py-2 rounded-full text-white font-bold mb-8">🍗 Non-Veg Frozen Products (12 Products)</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="nonvegGrid"></div>
+      </div>
+      
+      <!-- ============================================== -->
+      <!-- 11. READY-TO-COOK & SNACKS (12 Products)       -->
+      <!-- ============================================== -->
+      <div class="mb-16">
+        <div class="category-title px-6 py-2 rounded-full text-white font-bold mb-8">🍟 Ready-to-Cook & Snacks (12 Products)</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="snacksGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPDATED FOOTER - Same style as About Us page -->
+  <footer class="bg-green-900 text-white pt-14 pb-8">
+    <div class="container mx-auto px-6 grid md:grid-cols-4 gap-10">
+      <div><i class="fas fa-snowflake text-2xl text-amber-400 mb-3 block"></i><h3 class="text-xl font-bold">Sahyadri Enterprises</h3><p class="text-green-200 text-sm mt-2">Wholesale frozen food experts & export facilitators since 2025.</p><p class="text-green-200 text-sm mt-1">From Your Farm → To The World</p></div>
+      <div><h4 class="font-bold text-lg mb-3">Quick Links</h4><ul class="space-y-2 text-green-200"><li><a href="index.html" class="hover:text-amber-300">Home</a></li><li><a href="products.html" class="hover:text-amber-300">Products</a></li><li><a href="about.html" class="hover:text-amber-300">About</a></li><li><a href="contact.html" class="hover:text-amber-300">Contact</a></li></ul></div>
+      <div><h4 class="font-bold text-lg mb-3">Contact</h4><p class="text-green-200"><i class="fas fa-phone mr-2"></i> +91 9730519151</p><p class="text-green-200"><i class="fas fa-envelope mr-2"></i> sahyadrienterprises360@gmail.com</p><p class="text-green-200 text-sm mt-2"><i class="fas fa-clock mr-2"></i> 24 Hours</p></div>
+      <div><h4 class="font-bold text-lg mb-3">Follow Us</h4><div class="flex gap-4 text-2xl"><i class="fab fa-facebook hover:text-amber-400 cursor-pointer"></i><i class="fab fa-instagram hover:text-amber-400 cursor-pointer"></i></div><div class="mt-4 text-green-200 text-sm"><i class="fas fa-check-circle text-amber-400"></i> Verified Global Buyers Network</div></div>
+    </div>
+    <div class="text-center text-green-300 text-sm border-t border-green-800 mt-10 pt-6">© 2025 Sahyadri Enterprises – Premium Frozen Food Wholesaler & Export Connector. All rights reserved.</div>
+  </footer>
+
+  <a href="https://wa.me/919730519151?text=Hello%20Sahyadri%20Enterprises%2C%20I'm%20interested%20in%20bulk%20frozen%20products." class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp fa-2x"></i><span> Enquire on WhatsApp</span></a>
+
+  <script>
+    const IMAGE_FOLDER = "product-images/";
+    
+    // ==============================================
+    // 1. FROZEN FRUITS (8 Products)
+    // ==============================================
+    const fruitsProducts = [
+      { id: 1, name: "Frozen Mango Pulp", shortDesc: "Alphonso & Kesar variety", imageName: "mango.jpeg" },
+      { id: 5, name: "Frozen Strawberry Pulp", shortDesc: "Aromatic puree", imageName: "straw.png" },
+      { id: 9, name: "Frozen Banana Slices", shortDesc: "Sweet frozen banana slices", imageName: "banana.webp" },
+      { id: 10, name: "Frozen Apple Slices", shortDesc: "Crispy frozen apple pieces", imageName: "apple.avif" },
+      { id: 11, name: "Frozen Pineapple Chunks", shortDesc: "Sweet & tangy pineapple", imageName: "pinnea.png" },
+      { id: 12, name: "Frozen Mixed Berries", shortDesc: "Blueberry, raspberry, strawberry mix", imageName: "berri.webp" },
+      { id: 13, name: "Frozen Papaya Chunks", shortDesc: "Ripe frozen papaya", imageName: "papaya.png" },
+      { id: 14, name: "Frozen Guava Pulp", shortDesc: "Natural guava puree", imageName: "guva.webp" },
+      { id: 25, name: "Frozen Custard Apple Pulp", shortDesc: "Sweet custard apple puree", imageName: "custard.webp" }
+    ];
+    
+    // ==============================================
+    // 2. FROZEN VEGETABLES (15 Products)
+    // ==============================================
+    const vegetablesProducts = [
+      { id: 2, name: "Frozen Green Peas", shortDesc: "Sweet, tender peas", imageName: "green.jpeg" },
+      { id: 3, name: "Frozen Sweet Corn", shortDesc: "Crunchy golden corn", imageName: "sweet.jpeg" },
+      { id: 4, name: "Frozen Mixed Vegetables", shortDesc: "Peas, Corn, Carrots, Beans", imageName: "mix.jpg" },
+      { id: 7, name: "Frozen Spinach", shortDesc: "Chopped spinach", imageName: "spinach.jpeg" },
+      { id: 8, name: "Frozen Cauliflower", shortDesc: "Fresh florets", imageName: "cauli.jpeg" },
+      { id: 15, name: "Frozen Broccoli Florets", shortDesc: "Premium broccoli pieces", imageName: "brocolio.jpeg" },
+      { id: 16, name: "Frozen Carrot Dices", shortDesc: "Sweet diced carrots", imageName: "carrot.jpeg" },
+      { id: 17, name: "Frozen Green Beans", shortDesc: "Cut french beans", imageName: "beans.jpg" },
+      { id: 18, name: "Frozen Capsicum Strips", shortDesc: "Green & red capsicum mix", imageName: "capsicum.jpeg" },
+      { id: 19, name: "Frozen Onion Dices", shortDesc: "Chopped onions", imageName: "onion.jpg" },
+      { id: 20, name: "Frozen Garlic Paste", shortDesc: "Ready-to-use garlic", imageName: "garlic.webp" },
+      { id: 21, name: "Frozen Ginger Paste", shortDesc: "Fresh ginger paste", imageName: "ginger.jpg" },
+      { id: 22, name: "Frozen Ladyfinger", shortDesc: "Cut okra for curries", imageName: "okra.jpg" },
+      { id: 23, name: "Frozen Brinjal Slices", shortDesc: "Eggplant slices", imageName: "brinjal.jpg" },
+      { id: 24, name: "Frozen Bitter Gourd", shortDesc: "Sliced karela", imageName: "bitter.webp" }
+    ];
+    
+    // ==============================================
+    // 3. FROZEN PULPS & PUREES (6 Products)
+    // ==============================================
+    const pulpsProducts = [
+      { id: 44, name: "Frozen Guava Pulp", shortDesc: "Natural guava puree", imageName: "pink.png" },
+      { id: 26, name: "Frozen Tomato Pulp", shortDesc: "Rich tomato puree", imageName: "tomato.jpg" },
+      { id: 27, name: "Frozen Tamarind Pulp", shortDesc: "Sour tamarind paste", imageName: "tam.webp" },
+      { id: 28, name: "Frozen Chilli Paste", shortDesc: "Green chilli paste", imageName: "chilli.webp" },
+      { id: 29, name: "Frozen Coconut Milk", shortDesc: "Pure coconut milk", imageName: "coc.webp" },
+      { id: 30, name: "Frozen Lemon Juice", shortDesc: "Fresh frozen lemon", imageName: "lemon.webp" }
+    ];
+    
+    // ==============================================
+    // 4. FRESH PRODUCE (5 Products) - RESTORED
+    // ==============================================
+    const freshProduceProducts = [
+      { id: 113, name: "Fresh Onion", shortDesc: "Fresh whole onions for daily cooking", imageName: "oni.webp" },
+      { id: 114, name: "Fresh Garlic", shortDesc: "Fresh whole garlic cloves", imageName: "gar.avif" },
+      { id: 115, name: "Fresh Peeled Garlic", shortDesc: "Ready-to-use peeled garlic cloves", imageName: "garl.jpg" },
+      { id: 116, name: "Fresh Potatoes", shortDesc: "Fresh whole potatoes for all recipes", imageName: "pot.webp" },
+      { id: 117, name: "Fresh Spices", shortDesc: "Fresh whole spices for authentic flavor", imageName: "spices.webp" }
+    ];
+    
+    // ==============================================
+    // 5. FROZEN MOMOS (7 Products) - NEW
+    // ==============================================
+    const momosProducts = [
+      { id: 201, name: "Veg Momos Half Moon", shortDesc: "Classic veg momos", imageName: "mom.webp" },
+      { id: 202, name: "Fried Veg Kurkure Momos", shortDesc: "Crispy fried veg momos", imageName: "fry.jpg" },
+      { id: 203, name: "Corn Cheese Momos", shortDesc: "Corn & cheese filled", imageName: "cor.png" },
+      { id: 204, name: "Paneer Momos", shortDesc: "Cottage cheese momos", imageName: "pan.jpg" },
+      { id: 205, name: "Schezwan Momos", shortDesc: "Spicy Schezwan flavor", imageName: "sch.png" },
+      { id: 206, name: "Spinach Corn Momos", shortDesc: "Healthy spinach corn", imageName: "spi.jpg" },
+      { id: 207, name: "Fried Chicken Kurkure Momos", shortDesc: "Crispy chicken momos", imageName: "chi.jpg" },
+      { id: 607, name: "Chicken Momos", shortDesc: "Juicy chicken momos", imageName: "ste.jpg" },
+      { id:608, name: "Afghani Malai Tandoori Marinatio", shortDesc: "Creamy Afghani marinade", imageName: "chaap.jpg" },
+      { id:609, name: "Soya Chaap", shortDesc: "Protein-rich soya chaap", imageName: "soya.webp" }
+    ];
+    
+    // ==============================================
+    // 6. FROZEN BAKERY (5 Products) - NEW
+    // ==============================================
+    const bakeryProducts = [
+      { id: 301, name: "Choco Lava Cake", shortDesc: "Gooey chocolate center", imageName: "cho.jpg" },
+      { id: 302, name: "Walnut Brownie", shortDesc: "Rich walnut brownie", imageName: "bro.jpg" },
+      { id: 303, name: "Cheesecake", shortDesc: "Creamy cheesecake", imageName: "che.jpg" },
+      { id: 304, name: "Garlic Bread", shortDesc: "Butter garlic bread", imageName: "ga.webp" }
+    ];
+    
+    // ==============================================
+    // 7. PARATHAS & BREADS (9 Products) - NEW
+    // ==============================================
+    const parathasProducts = [
+      { id: 401, name: "Malabar Paratha 8 Inch", shortDesc: "Kerala style flaky paratha", imageName: "par.webp" },
+      { id: 402, name: "Laccha Paratha 8 Inch", shortDesc: "Layered laccha paratha", imageName: "lac.jpg" },
+      { id: 403, name: "Aloo Paratha", shortDesc: "Stuffed potato paratha", imageName: "alo.avif" },
+      { id: 404, name: "Tikona Paratha", shortDesc: "Triangular paratha", imageName: "tiko.jpg" },
+      { id: 405, name: "Gobi Paratha", shortDesc: "Stuffed cauliflower paratha", imageName: "gobi.jpg" },
+      { id: 406, name: "Paneer Paratha", shortDesc: "Stuffed cottage cheese paratha", imageName: "paner.avif" },
+      { id: 407, name: "Garlic Naan", shortDesc: "Butter garlic naan", imageName: "nan.webp" },
+      { id: 408, name: "Tandoori Naan", shortDesc: "Traditional tandoori naan", imageName: "tandoori.avif" },
+      { id: 409, name: "Frozen Chapati", shortDesc: "Whole wheat chapati", imageName: "chapati.webp" }
+    ];
+    
+    // ==============================================
+    // 8. VEG SNACKS (5 Products) - NEW
+    // ==============================================
+    const vegSnacksProducts = [
+      { id: 501, name: "Punjabi Samosa 80gm", shortDesc: "Large punjabi samosa", imageName: "punjabi.jpg" },
+      { id: 502, name: "Punjabi Samosa 40gm", shortDesc: "Medium punjabi samosa", imageName: "40.webp" },
+      { id: 503, name: "Veg Patti Samosa", shortDesc: "Flaky patti samosa", imageName: "pati.jpeg" },
+      { id: 504, name: "Veg Spring Roll", shortDesc: "Crispy veg spring roll", imageName: "roll.jpg" },
+      { id: 505, name: "Veg Spring Roll Mini", shortDesc: "Mini spring rolls", imageName: "mini.webp" }
+    ];
+    
+    // ==============================================
+    // 9. NON-VEG SNACKS (7 Products) - NEW
+    // ==============================================
+    const nonVegSnacksProducts = [
+      { id: 601, name: "Chicken Patti Samosa", shortDesc: "Chicken filled samosa", imageName: "chick.webp" },
+      { id: 602, name: "Chicken Spring Roll", shortDesc: "Crispy chicken roll", imageName: "spr.jpg" },
+      { id: 603, name: "Chicken Burger Patty", shortDesc: "Juicy chicken patty", imageName: "patty.webp" },
+      { id: 604, name: "Chicken Nuggets", shortDesc: "Crispy chicken nuggets", imageName: "nug.webp" },
+      { id: 605, name: "Chicken Popcorn", shortDesc: "Bite-sized chicken", imageName: "pop.avif" },
+      { id: 606, name: "Chicken Strips", shortDesc: "Crispy chicken strips", imageName: "strip.jpg" }
+    ];
+    
+    // ==============================================
+    // 10. NON-VEG FROZEN PRODUCTS (12 Products)
+    // ==============================================
+    const nonvegProducts = [
+      { id: 101, name: "Frozen Chicken Breast", shortDesc: "Boneless, skinless chicken breast", imageName: "chicken.webp" },
+      { id: 102, name: "Frozen Chicken Drumsticks", shortDesc: "Juicy chicken drumsticks", imageName: "drum.jpg" },
+      { id: 103, name: "Frozen Chicken Thighs", shortDesc: "Boneless chicken thighs", imageName: "thighs.jpg" },
+      { id: 104, name: "Frozen Chicken Wings", shortDesc: "Party chicken wings", imageName: "wins.jpg" },
+      { id: 105, name: "Frozen Chicken Curry Cut", shortDesc: "Medium size curry pieces", imageName: "cut.webp" },
+      { id: 106, name: "Frozen Chicken Nuggets", shortDesc: "Crispy chicken nuggets", imageName: "nug.webp" },
+      { id: 107, name: "Frozen Chicken Popcorn", shortDesc: "Bite-sized chicken pops", imageName: "pop.avif" },
+      { id: 108, name: "Frozen Chicken Sausages", shortDesc: "Premium chicken sausages", imageName: "saus.webp" },
+      { id: 109, name: "Frozen Fish Fillets", shortDesc: "Boneless Basa fillets", imageName: "fish.avif" },
+      { id: 110, name: "Frozen Prawns", shortDesc: "Medium size cleaned prawns", imageName: "prawn.jpg" },
+      { id: 111, name: "Frozen Squid Rings", shortDesc: "Tender squid rings", imageName: "squid.jpg" },
+      { id: 112, name: "Frozen Chicken Harra Bhara Kabab", shortDesc: "Healthy chicken kabab", imageName: "kab.webp" }
+    ];
+    
+    // ==============================================
+    // 11. READY-TO-COOK & SNACKS (12 Products)
+    // ==============================================
+    const snacksProducts = [
+      { id: 6, name: "Frozen French Fries", shortDesc: "Crispy fry cuts", imageName: "french.webp" },
+      { id: 31, name: "Frozen Potato Wedges", shortDesc: "Spiced wedges", imageName: "potato.jpeg" },
+      { id: 32, name: "Frozen Onion Rings", shortDesc: "Crunchy onion rings", imageName: "ring.webp" },
+      { id: 33, name: "Frozen Veg Nuggets", shortDesc: "Vegetable nuggets", imageName: "nuggest.jpg" },
+      { id: 34, name: "Frozen Spring Rolls", shortDesc: "Veg spring rolls", imageName: "spring.jpg" },
+      { id: 35, name: "Frozen Samosa", shortDesc: "Punjabi samosa", imageName: "samosa.webp" },
+      { id: 36, name: "Frozen Pizza Base", shortDesc: "Readymade pizza base", imageName: "pizza.avif" },
+      { id: 37, name: "Frozen Paratha", shortDesc: "Whole wheat paratha", imageName: "paratha.webp" },
+      { id: 38, name: "Frozen Chapati", shortDesc: "Roti/chapati", imageName: "chapati.webp" },
+      { id: 39, name: "Frozen Cutlet", shortDesc: "Veg cutlet", imageName: "cutlet.jpeg" },
+      { id: 40, name: "Frozen Hara Bhara Kabab", shortDesc: "Spinach kabab", imageName: "kabab.jpg" },
+      { id: 43, name: "Frozen Cheese Nuggets", shortDesc: "Cheese filled nuggets", imageName: "cheese.jpg" }
+    ];
+    
+    function createProductCard(product) {
+      const card = document.createElement('div');
+      card.className = "product-card bg-white rounded-2xl overflow-hidden shadow-md";
+      card.onclick = () => window.location.href = `product-detail.html?id=${product.id}`;
+      const imagePath = IMAGE_FOLDER + product.imageName;
+      card.innerHTML = `
+        <div class="h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+          <img class="product-img w-full h-full object-cover" src="${imagePath}" alt="${product.name}" 
+               onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\\'fas fa-snowflake text-6xl text-gray-400\\'></i>'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
+        </div>
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-green-800">${product.name}</h3>
+          <p class="text-gray-500 text-sm mt-1">${product.shortDesc}</p>
+          <span class="text-amber-600 font-semibold inline-block mt-3">View Details →</span>
+        </div>
+      `;
+      return card;
+    }
+    
+    // Populate all grids
+    fruitsProducts.forEach(p => document.getElementById('fruitsGrid').appendChild(createProductCard(p)));
+    vegetablesProducts.forEach(p => document.getElementById('vegetablesGrid').appendChild(createProductCard(p)));
+    pulpsProducts.forEach(p => document.getElementById('pulpsGrid').appendChild(createProductCard(p)));
+    freshProduceProducts.forEach(p => document.getElementById('freshProduceGrid').appendChild(createProductCard(p)));
+    momosProducts.forEach(p => document.getElementById('momosGrid').appendChild(createProductCard(p)));
+    bakeryProducts.forEach(p => document.getElementById('bakeryGrid').appendChild(createProductCard(p)));
+    parathasProducts.forEach(p => document.getElementById('parathasGrid').appendChild(createProductCard(p)));
+    vegSnacksProducts.forEach(p => document.getElementById('vegSnacksGrid').appendChild(createProductCard(p)));
+    nonVegSnacksProducts.forEach(p => document.getElementById('nonVegSnacksGrid').appendChild(createProductCard(p)));
+    nonvegProducts.forEach(p => document.getElementById('nonvegGrid').appendChild(createProductCard(p)));
+    snacksProducts.forEach(p => document.getElementById('snacksGrid').appendChild(createProductCard(p)));
+    
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if(menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+    }
+  </script>
+</body>
+</html>

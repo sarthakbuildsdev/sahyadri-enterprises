@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahyadri Enterprises | Premium Frozen Food Wholesaler</title>
+  <meta name="description" content="Sahyadri Enterprises - Trusted frozen food supplier offering premium frozen mango pulp, green peas, sweet corn, mixed vegetables and more. Wholesale frozen foods across India.">
+  <meta name="keywords" content="Frozen Food Supplier, Frozen Mango Pulp Supplier, Frozen Green Peas Supplier, Frozen Food Exporter, Premium Frozen Foods, Frozen Vegetables Supplier">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G82D3PQWJL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G82D3PQWJL');
+</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    .gold-gradient { background: linear-gradient(135deg, #fbbf24, #d97706); }
+    .product-card { transition: all 0.35s ease; cursor: pointer; }
+    .product-card:hover { transform: translateY(-8px); box-shadow: 0 25px 35px -12px rgba(0,0,0,0.2); }
+    .whatsapp-float { position: fixed; bottom: 28px; right: 28px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; border-radius: 60px; padding: 12px 24px; display: flex; align-items: center; gap: 12px; font-weight: 700; z-index: 99; box-shadow: 0 10px 20px rgba(0,0,0,0.25); text-decoration: none; }
+    .whatsapp-float:hover { transform: scale(1.05); }
+    @media (max-width: 580px) { .whatsapp-float span { display: none; } .whatsapp-float { padding: 12px; border-radius: 50%; } }
+    .nav-link-active { border-bottom: 3px solid #fbbf24; color: #fbbf24 !important; font-weight: 600; }
+    .animate-fade-up { animation: fadeUp 0.7s ease-out forwards; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    
+    /* Black Navigation Bar Styles */
+    .black-navbar {
+      background-color: #000000 !important;
+    }
+    .nav-link {
+      color: #ffffff !important;
+    }
+    .nav-link:hover {
+      color: #fbbf24 !important;
+    }
+    .mobile-menu-black {
+      background-color: #000000 !important;
+    }
+    .mobile-menu-black a {
+      color: #ffffff !important;
+    }
+    .mobile-menu-black a:hover {
+      color: #fbbf24 !important;
+    }
+    .product-img-home {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    /* Background image for the entire hero section */
+    .hero-with-bg {
+      background-image: url('product-images/back.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+    
+    /* Dark overlay for better text readability */
+    .hero-with-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: 1;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    /* Feature badges styling */
+    .feature-badge {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 10px 24px;
+      border-radius: 40px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+<!-- Black Navigation Bar -->
+<header class="sticky top-0 z-50 black-navbar shadow-md">
+  <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <h1 class="text-2xl md:text-3xl font-extrabold text-white">Sahyadri <span class="text-amber-400">Enterprises</span></h1>
+    </div>
+    <nav class="hidden md:flex space-x-8 font-medium">
+      <a href="index.html" class="nav-link nav-link-active transition">Home</a>
+      <a href="products.html" class="nav-link transition">Products</a>
+      <a href="about.html" class="nav-link transition">About Us</a>
+      <a href="contact.html" class="nav-link transition">Contact</a>
+    </nav>
+    <button id="mobileMenuBtn" class="md:hidden text-2xl text-white"><i class="fas fa-bars"></i></button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden mobile-menu-black border-t border-gray-700 px-6 pb-4 pt-2 flex flex-col gap-2">
+    <a href="index.html" class="py-2 text-white hover:text-amber-400 transition">Home</a>
+    <a href="products.html" class="py-2 text-white hover:text-amber-400 transition">Products</a>
+    <a href="about.html" class="py-2 text-white hover:text-amber-400 transition">About Us</a>
+    <a href="contact.html" class="py-2 text-white hover:text-amber-400 transition">Contact</a>
+  </div>
+</header>
+
+  <!-- Hero Section with Background Image - Company Name + Feature Badges + Buttons Below -->
+  <section class="relative min-h-[90vh] flex items-center hero-with-bg">
+    <div class="container mx-auto px-6 hero-content text-center">
+      <div class="max-w-3xl mx-auto">
+        
+        <!-- Buttons Below the Feature Badges -->
+        </br></br>
+        </br></br>
+        </br></br>
+        </br></br>
+        <div class="flex flex-wrap gap-5 mt-10 justify-center">
+          <a href="products.html" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-full transition shadow-xl"><i class="fas fa-boxes"></i> View Products</a>
+          <a href="contact.html" class="bg-white text-green-800 hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition shadow-xl"><i class="fas fa-headset"></i> Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-14">
+        <span class="text-amber-600 font-semibold tracking-wide">Premium Range</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-green-800 mt-2">Featured Products</h2>
+        <div class="w-24 h-1 gold-gradient mx-auto mt-4 rounded-full"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-5">Wholesale frozen fruits & vegetables – sourced fresh, frozen fast, delivered nationwide.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-14">
+        <h2 class="text-4xl font-bold text-green-800">Why Choose Us?</h2>
+        <div class="w-20 h-1 bg-amber-500 mx-auto mt-3 mb-4 rounded-full"></div>
+        <p class="text-gray-600">Trusted by hotels, restaurants, and bulk buyers across India</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="text-center p-7 rounded-2xl bg-gray-50 shadow-md hover:shadow-lg transition"><i class="fas fa-certificate text-5xl text-green-700 mb-4"></i><h3 class="text-xl font-bold">Premium Quality</h3><p class="text-gray-500">IQF technology, farm-fresh taste, no preservatives.</p></div>
+        <div class="text-center p-7 rounded-2xl bg-gray-50 shadow-md hover:shadow-lg transition"><i class="fas fa-temperature-low text-5xl text-green-700 mb-4"></i><h3 class="text-xl font-bold">Cold Storage Supply</h3><p class="text-gray-500">-18°C maintained cold chain from warehouse to doorstep.</p></div>
+        <div class="text-center p-7 rounded-2xl bg-gray-50 shadow-md hover:shadow-lg transition"><i class="fas fa-truck-fast text-5xl text-green-700 mb-4"></i><h3 class="text-xl font-bold">Fast Logistics</h3><p class="text-gray-500">Pan India delivery with dedicated refrigerated fleet.</p></div>
+        <div class="text-center p-7 rounded-2xl bg-gray-50 shadow-md hover:shadow-lg transition"><i class="fas fa-hand-holding-usd text-5xl text-green-700 mb-4"></i><h3 class="text-xl font-bold">Wholesale Pricing</h3><p class="text-gray-500">Best rates for bulk orders & repeated supplies.</p></div>
+        <div class="text-center p-7 rounded-2xl bg-gray-50 shadow-md hover:shadow-lg transition"><i class="fas fa-clinic-medical text-5xl text-green-700 mb-4"></i><h3 class="text-xl font-bold">Hygienic Processing</h3><p class="text-gray-500">FSSAI approved, state-of-the-art facility.</p></div>
+        <div class="text-center p-7 rounded-2xl bg-gray-50 shadow-md hover:shadow-lg transition"><i class="fas fa-globe text-5xl text-green-700 mb-4"></i><h3 class="text-xl font-bold">Export Ready</h3><p class="text-gray-500">Compliant with international quality standards.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW FOOTER - Updated with same style as About Us page -->
+  <footer class="bg-green-900 text-white pt-14 pb-8">
+    <div class="container mx-auto px-6 grid md:grid-cols-4 gap-10">
+      <div><i class="fas fa-snowflake text-2xl text-amber-400 mb-3 block"></i><h3 class="text-xl font-bold">Sahyadri Enterprises</h3><p class="text-green-200 text-sm mt-2">Wholesale frozen food experts & export facilitators since 2025.</p><p class="text-green-200 text-sm mt-1">From Your Farm → To The World</p></div>
+      <div><h4 class="font-bold text-lg mb-3">Quick Links</h4><ul class="space-y-2 text-green-200"><li><a href="index.html" class="hover:text-amber-300">Home</a></li><li><a href="products.html" class="hover:text-amber-300">Products</a></li><li><a href="about.html" class="hover:text-amber-300">About</a></li><li><a href="contact.html" class="hover:text-amber-300">Contact</a></li></ul></div>
+      <div><h4 class="font-bold text-lg mb-3">Contact</h4><p class="text-green-200"><i class="fas fa-phone mr-2"></i> +91 9730519151</p><p class="text-green-200"><i class="fas fa-envelope mr-2"></i> sahyadrienterprises360@gmail.com</p><p class="text-green-200 text-sm mt-2"><i class="fas fa-clock mr-2"></i> 24 Hours</p></div>
+      <div><h4 class="font-bold text-lg mb-3">Follow Us</h4><div class="flex gap-4 text-2xl"><i class="fab fa-facebook hover:text-amber-400 cursor-pointer"></i><i class="fab fa-instagram hover:text-amber-400 cursor-pointer"></i></div><div class="mt-4 text-green-200 text-sm"><i class="fas fa-check-circle text-amber-400"></i> Verified Global Buyers Network</div></div>
+    </div>
+    <div class="text-center text-green-300 text-sm border-t border-green-800 mt-10 pt-6">© 2025 Sahyadri Enterprises – Premium Frozen Food Wholesaler & Export Connector. All rights reserved.</div>
+  </footer>
+
+  <a href="https://wa.me/919730519151?text=Hello%20Sahyadri%20Enterprises%2C%20I'm%20interested%20in%20bulk%20frozen%20products." class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp fa-2x"></i><span> Enquire on WhatsApp</span></a>
+
+  <script>
+    // Image folder path - must match the same folder as products.html
+    const IMAGE_FOLDER = "product-images/";
+    
+    // Map product IDs to their image names (matching products.html)
+    const productImageMap = {
+      1: "mango.jpeg",
+      2: "green.jpeg",
+      3: "sweet.jpeg",
+      4: "mix.jpg",
+      5: "straw.png",
+      6: "french.webp"
+    };
+    
+    const featuredProducts = [
+      { id: 1, name: "Frozen Mango Pulp", shortDesc: "Alphonso & Kesar – Rich pulp for industry" },
+      { id: 2, name: "Frozen Green Peas", shortDesc: "Sweet, tender & naturally fresh" },
+      { id: 3, name: "Frozen Sweet Corn", shortDesc: "Crunchy golden corn kernels" },
+      { id: 4, name: "Frozen Mixed Vegetables", shortDesc: "Peas, Corn, Carrots, Beans mix" },
+      { id: 5, name: "Frozen Strawberry Pulp", shortDesc: "Aromatic, naturally sweet puree" },
+      { id: 6, name: "Frozen French Fries", shortDesc: "Crispy, golden fry cuts" }
+    ];
+    
+    const featuredGrid = document.getElementById('featuredGrid');
+    featuredProducts.forEach(product => {
+      const card = document.createElement('div');
+      card.className = "product-card bg-white rounded-2xl overflow-hidden shadow-md";
+      card.onclick = () => window.location.href = `product-detail.html?id=${product.id}`;
+      
+      // Get the image name for this product
+      const imageName = productImageMap[product.id];
+      const imagePath = IMAGE_FOLDER + imageName;
+      
+      card.innerHTML = `
+        <div class="h-56 bg-gray-200 flex items-center justify-center overflow-hidden">
+          <img class="product-img-home w-full h-full object-cover" src="${imagePath}" alt="${product.name}" 
+               onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fas fa-snowflake text-6xl text-gray-400\'></i>'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
+        </div>
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-green-800">${product.name}</h3>
+          <p class="text-gray-600 mt-1">${product.shortDesc}</p>
+          <span class="text-amber-600 font-semibold inline-block mt-3">View Details →</span>
+        </div>
+      `;
+      featuredGrid.appendChild(card);
+    });
+    
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if(menuBtn) menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>

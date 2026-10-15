@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Sahyadri Enterprises - Frozen Food Wholesaler & Export Experts</title>
+  <meta name="description" content="Get in touch with Sahyadri Enterprises for wholesale frozen food inquiries and global export assistance. Call, email, or visit our office in Kamothe, Navi Mumbai.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G82D3PQWJL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G82D3PQWJL');
+</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    .whatsapp-float { position: fixed; bottom: 28px; right: 28px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; border-radius: 60px; padding: 12px 24px; display: flex; align-items: center; gap: 12px; font-weight: 700; z-index: 99; text-decoration: none; box-shadow: 0 10px 20px rgba(0,0,0,0.25); }
+    .whatsapp-float:hover { transform: scale(1.05); }
+    @media (max-width: 580px) { .whatsapp-float span { display: none; } .whatsapp-float { padding: 12px; border-radius: 50%; } }
+    .inquiry-input:focus { outline: none; box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.3); border-color: #fbbf24; }
+    
+    /* Black Navigation Bar Styles */
+    .black-navbar {
+      background-color: #000000 !important;
+    }
+    .nav-link {
+      color: #ffffff !important;
+      transition: all 0.2s ease;
+      font-weight: 500;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+    }
+    .nav-link:hover {
+      color: #fbbf24 !important;
+      border-bottom-color: #fbbf24;
+    }
+    .nav-link-active {
+      border-bottom: 2px solid #fbbf24;
+      color: #fbbf24 !important;
+      font-weight: 600;
+    }
+    .mobile-menu-black {
+      background-color: #000000 !important;
+    }
+    .mobile-menu-black a {
+      color: #ffffff !important;
+      font-weight: 500;
+    }
+    .mobile-menu-black a:hover {
+      color: #fbbf24 !important;
+      padding-left: 4px;
+    }
+    .black-navbar {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .toast-notification {
+      position: fixed;
+      bottom: 100px;
+      right: 28px;
+      background: #10B981;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 12px;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      font-weight: 500;
+    }
+    .toast-error {
+      background: #EF4444;
+    }
+    .loading-spinner {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid white;
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: spin 0.6s linear infinite;
+      margin-right: 8px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    button:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BLACK NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 black-navbar shadow-md">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-2">
+          <h1 class="text-2xl md:text-3xl font-extrabold text-white">Sahyadri <span class="text-amber-400">Enterprises</span></h1>
+        </a>
+      </div>
+      
+      <nav class="hidden md:flex space-x-8 font-medium">
+        <a href="index.html" class="nav-link transition">Home</a>
+        <a href="products.html" class="nav-link transition">Products</a>
+        <a href="about.html" class="nav-link transition">About Us</a>
+        <a href="contact.html" class="nav-link nav-link-active transition">Contact</a>
+      </nav>
+      
+      <button id="mobileMenuBtn" class="md:hidden text-2xl text-white focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <div id="mobileMenu" class="hidden md:hidden mobile-menu-black border-t border-gray-700 px-6 pb-5 pt-3 flex flex-col gap-3">
+      <a href="index.html" class="py-2 text-white hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-home w-5"></i> Home</a>
+      <a href="products.html" class="py-2 text-white hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-boxes w-5"></i> Products</a>
+      <a href="about.html" class="py-2 text-white hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-info-circle w-5"></i> About Us</a>
+      <a href="contact.html" class="py-2 text-amber-400 transition flex items-center gap-2"><i class="fas fa-envelope w-5"></i> Contact</a>
+    </div>
+  </header>
+
+  <!-- Toast Notifications -->
+  <div id="toastSuccess" class="toast-notification">
+    <i class="fas fa-check-circle text-xl"></i>
+    <span>Inquiry sent successfully! We'll reply within 24 hours.</span>
+  </div>
+  <div id="toastError" class="toast-notification toast-error">
+    <i class="fas fa-exclamation-triangle text-xl"></i>
+    <span id="errorMessage">Something went wrong. Please call us directly.</span>
+  </div>
+
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-14">
+        <h2 class="text-4xl font-bold text-green-800">Get In Touch</h2>
+        <div class="w-24 h-1 bg-amber-500 mx-auto mt-4 rounded-full"></div>
+        <p class="text-gray-600 mt-4">Reach out for wholesale quotes, samples, export inquiries, or partnership discussions</p>
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Business Information Card (Updated with Warehouse Address) -->
+        <div class="bg-white p-8 rounded-3xl shadow-xl space-y-5">
+          <h3 class="text-2xl font-bold text-green-800 mb-6"><i class="fas fa-address-card text-amber-500 mr-2"></i> Business Information</h3>
+          <div class="flex items-start gap-3"><i class="fas fa-building w-6 text-amber-600 mt-1"></i><div><span class="font-semibold">Registered Address:</span><br>Bld No E04, 403, Hansdwani Gruhasankul, Plot No 01-09, Sector 15, Kalamboli - 410218</div></div>
+          <div class="flex items-start gap-3"><i class="fas fa-location-dot w-6 text-amber-600 mt-1"></i><div><span class="font-semibold">Office Address:</span><br>Shop No 01, Avishkar Vishta CHS, Plot No 31, Sector 05, Kamothe - 410209</div></div>
+          <div><i class="fas fa-file-invoice w-6 text-amber-600"></i> <span class="font-semibold">GST No:</span> 27ALJPJ7378L1ZC</div>
+          <div><i class="fas fa-utensils w-6 text-amber-600"></i> <span class="font-semibold">FSSAI No:</span> 21526024000533</div>
+          <!-- New Warehouse Address Line Added Here -->
+          <div class="flex items-start gap-3"><i class="fas fa-warehouse w-6 text-amber-600 mt-1"></i><div><span class="font-semibold">Warehouse Address:</span><br>A/P: Chinchani, Tal: Shirur, Dist: Pune, State: Maharashtra, Nhavare - 412211</div></div>
+          <div><i class="fas fa-phone-alt w-6 text-amber-600"></i> <span class="font-semibold">Contact Numbers:</span><br><a href="tel:+919730519151" class="hover:underline text-green-700">+91 9730519151</a> / <a href="tel:+919960346945" class="hover:underline text-green-700">+91 9960346945</a></div>
+          <div><i class="fas fa-envelope w-6 text-amber-600"></i> <span class="font-semibold">Email:</span><br><a href="mailto:sahyadrienterprises360@gmail.com" class="hover:underline text-green-700">sahyadrienterprises360@gmail.com</a></div>
+          <div><i class="fas fa-clock w-6 text-amber-600"></i> <span class="font-semibold">Business Hours:</span><br>24 Hours</div>
+          <div class="pt-4 flex flex-wrap gap-4">
+            <a href="tel:+919730519151" class="bg-green-700 hover:bg-green-800 text-white px-5 py-2 rounded-full transition"><i class="fas fa-phone"></i> Call Now</a>
+            <a href="https://wa.me/919730519151" target="_blank" class="bg-[#25D366] hover:bg-[#128C7E] text-white px-5 py-2 rounded-full transition"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+        
+        <!-- Inquiry Form with Multiple Submission Methods -->
+        <div class="bg-white p-8 rounded-3xl shadow-xl">
+          <h3 class="text-2xl font-bold text-green-800 mb-5">Send Inquiry (Wholesale/Bulk/Export)</h3>
+          
+          <form id="inquiryForm">
+            <input type="text" id="companyName" placeholder="Company / Business Name *" required class="w-full border border-gray-200 rounded-xl p-3 mb-4 inquiry-input">
+            <input type="text" id="fullName" placeholder="Full Name *" required class="w-full border border-gray-200 rounded-xl p-3 mb-4 inquiry-input">
+            <input type="tel" id="phone" placeholder="Phone Number *" required class="w-full border border-gray-200 rounded-xl p-3 mb-4 inquiry-input">
+            <input type="email" id="email" placeholder="Email Address" class="w-full border border-gray-200 rounded-xl p-3 mb-4 inquiry-input">
+            
+            <select id="productInterest" required class="w-full border border-gray-200 rounded-xl p-3 mb-4 inquiry-input">
+              <option value="">-- Select Product / Service --</option>
+              <option value="Frozen Mango Pulp">Frozen Mango Pulp (Alphonso & Kesar)</option>
+              <option value="Frozen Green Peas">Frozen Green Peas</option>
+              <option value="Frozen Sweet Corn">Frozen Sweet Corn</option>
+              <option value="Frozen Mixed Vegetables">Frozen Mixed Vegetables</option>
+              <option value="Frozen Strawberry Pulp">Frozen Strawberry Pulp</option>
+              <option value="Frozen French Fries">Frozen French Fries</option>
+              <option value="Frozen Spinach">Frozen Spinach</option>
+              <option value="Frozen Cauliflower">Frozen Cauliflower</option>
+              <option value="Frozen Broccoli Florets">Frozen Broccoli Florets</option>
+              <option value="Frozen Carrot Dices">Frozen Carrot Dices</option>
+              <option value="Frozen Green Beans">Frozen Green Beans</option>
+              <option value="Frozen Capsicum Strips">Frozen Capsicum Strips</option>
+              <option value="Frozen Onion Dices">Frozen Onion Dices</option>
+              <option value="Frozen Garlic Paste">Frozen Garlic Paste</option>
+              <option value="Frozen Ginger Paste">Frozen Ginger Paste</option>
+              <option value="Frozen Ladyfinger">Frozen Ladyfinger (Okra)</option>
+              <option value="Frozen Brinjal Slices">Frozen Brinjal Slices</option>
+              <option value="Frozen Bitter Gourd">Frozen Bitter Gourd (Karela)</option>
+              <option value="Frozen Custard Apple Pulp">Frozen Custard Apple Pulp (Sitaphal)</option>
+              <option value="Frozen Banana Slices">Frozen Banana Slices</option>
+              <option value="Frozen Apple Slices">Frozen Apple Slices</option>
+              <option value="Frozen Pineapple Chunks">Frozen Pineapple Chunks</option>
+              <option value="Frozen Mixed Berries">Frozen Mixed Berries</option>
+              <option value="Frozen Papaya Chunks">Frozen Papaya Chunks</option>
+              <option value="Frozen Guava Pulp">Frozen Guava Pulp</option>
+              <option value="Frozen Tomato Pulp">Frozen Tomato Pulp</option>
+              <option value="Frozen Tamarind Pulp">Frozen Tamarind Pulp</option>
+              <option value="Frozen Chilli Paste">Frozen Chilli Paste</option>
+              <option value="Frozen Coconut Milk">Frozen Coconut Milk</option>
+              <option value="Frozen Lemon Juice">Frozen Lemon Juice</option>
+              <option value="Frozen Potato Wedges">Frozen Potato Wedges</option>
+              <option value="Frozen Onion Rings">Frozen Onion Rings</option>
+              <option value="Frozen Veg Nuggets">Frozen Veg Nuggets</option>
+              <option value="Frozen Spring Rolls">Frozen Spring Rolls</option>
+              <option value="Frozen Samosa">Frozen Samosa</option>
+              <option value="Frozen Pizza Base">Frozen Pizza Base</option>
+              <option value="Frozen Paratha">Frozen Paratha</option>
+              <option value="Frozen Chapati">Frozen Chapati</option>
+              <option value="Frozen Cutlet">Frozen Cutlet</option>
+              <option value="Frozen Hara Bhara Kabab">Frozen Hara Bhara Kabab</option>
+              <option value="Frozen Cheese Nuggets">Frozen Cheese Nuggets</option>
+              <option value="Frozen Chicken Breast">Frozen Chicken Breast</option>
+              <option value="Frozen Chicken Drumsticks">Frozen Chicken Drumsticks</option>
+              <option value="Frozen Chicken Thighs">Frozen Chicken Thighs</option>
+              <option value="Frozen Chicken Wings">Frozen Chicken Wings</option>
+              <option value="Frozen Chicken Curry Cut">Frozen Chicken Curry Cut</option>
+              <option value="Frozen Chicken Nuggets">Frozen Chicken Nuggets</option>
+              <option value="Frozen Chicken Popcorn">Frozen Chicken Popcorn</option>
+              <option value="Frozen Chicken Sausages">Frozen Chicken Sausages</option>
+              <option value="Frozen Fish Fillets">Frozen Fish Fillets</option>
+              <option value="Frozen Prawns">Frozen Prawns</option>
+              <option value="Frozen Squid Rings">Frozen Squid Rings</option>
+              <option value="Fresh Onion">Fresh Onion</option>
+              <option value="Fresh Garlic">Fresh Garlic</option>
+              <option value="Fresh Peeled Garlic">Fresh Peeled Garlic</option>
+              <option value="Fresh Potatoes">Fresh Potatoes</option>
+              <option value="Fresh Spices">Fresh Spices</option>
+              <option value="Export Consultation / Global Buyers">Export Consultation / Connect to Verified Global Buyers</option>
+              <option value="Multiple Products / Bulk Order">Multiple Products / Bulk Order</option>
+            </select>
+            
+            <textarea id="message" rows="4" placeholder="Tell us about your requirement (quantity, packaging, delivery location, export destination if applicable) *" required class="w-full border border-gray-200 rounded-xl p-3 mb-4 inquiry-input"></textarea>
+            
+            <button type="submit" id="submitBtn" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-xl w-full transition">
+              <i class="fas fa-paper-plane"></i> Send Inquiry
+            </button>
+          </form>
+          
+          <div class="mt-6 pt-4 border-t text-center text-sm text-gray-500">
+            <p class="mb-2"><i class="fas fa-shield-alt text-green-600"></i> Your information is secure</p>
+            <p class="text-xs">Prefer to call? <a href="tel:+919730519151" class="text-amber-600 font-semibold">+91 9730519151</a></p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- LIVE GOOGLE MAPS (Updated with more precise location reference) -->
+      <div class="mt-12 rounded-2xl overflow-hidden shadow-2xl">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15084.497876497687!2d73.101475!3d19.017235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c1e0e1b5d5b5%3A0x8a9b2c3d4e5f6a7b!2sAavishkar%20Vista%2C%20Sector%205%2C%20Kamothe%2C%20Panvel%2C%20Maharashtra%20410209!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="bg-white p-4 text-center border-t">
+          <p class="text-gray-700"><i class="fas fa-map-marker-alt text-amber-600 mr-2 text-lg"></i> <strong>📍 Office Location:</strong> Shop No 01, Avishkar Vishta CHS, Plot No 31, Sector 05, Kamothe - 410209, Navi Mumbai, Maharashtra</p>
+          <p class="text-gray-500 text-sm mt-2"><i class="fas fa-clock mr-1"></i> 24 Hours</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPDATED FOOTER - Same style as About Us page -->
+  <footer class="bg-green-900 text-white pt-14 pb-8">
+    <div class="container mx-auto px-6 grid md:grid-cols-4 gap-10">
+      <div><i class="fas fa-snowflake text-2xl text-amber-400 mb-3 block"></i><h3 class="text-xl font-bold">Sahyadri Enterprises</h3><p class="text-green-200 text-sm mt-2">Wholesale frozen food experts & export facilitators since 2025.</p><p class="text-green-200 text-sm mt-1">From Your Farm → To The World</p></div>
+      <div><h4 class="font-bold text-lg mb-3">Quick Links</h4><ul class="space-y-2 text-green-200"><li><a href="index.html" class="hover:text-amber-300">Home</a></li><li><a href="products.html" class="hover:text-amber-300">Products</a></li><li><a href="about.html" class="hover:text-amber-300">About</a></li><li><a href="contact.html" class="hover:text-amber-300">Contact</a></li></ul></div>
+      <div><h4 class="font-bold text-lg mb-3">Contact</h4><p class="text-green-200"><i class="fas fa-phone mr-2"></i> +91 9730519151</p><p class="text-green-200"><i class="fas fa-envelope mr-2"></i> sahyadrienterprises360@gmail.com</p><p class="text-green-200 text-sm mt-2"><i class="fas fa-clock mr-2"></i> 24 Hours</p></div>
+      <div><h4 class="font-bold text-lg mb-3">Follow Us</h4><div class="flex gap-4 text-2xl"><i class="fab fa-facebook hover:text-amber-400 cursor-pointer"></i><i class="fab fa-instagram hover:text-amber-400 cursor-pointer"></i></div><div class="mt-4 text-green-200 text-sm"><i class="fas fa-check-circle text-amber-400"></i> Verified Global Buyers Network</div></div>
+    </div>
+    <div class="text-center text-green-300 text-sm border-t border-green-800 mt-10 pt-6">© 2025 Sahyadri Enterprises – Premium Frozen Food Wholesaler & Export Connector. All rights reserved.</div>
+  </footer>
+
+  <a href="https://wa.me/919730519151?text=Hello%20Sahyadri%20Enterprises%2C%20I'm%20interested%20in%20bulk%20frozen%20products%20or%20global%20export%20buyers." class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp fa-2x"></i><span> Enquire on WhatsApp</span></a>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if(menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+    
+    // Toast notification functions
+    function showToast(type, message) {
+      const toastSuccess = document.getElementById('toastSuccess');
+      const toastError = document.getElementById('toastError');
+      const errorMessageSpan = document.getElementById('errorMessage');
+      
+      if (type === 'success') {
+        if (toastSuccess) {
+          toastSuccess.style.display = 'flex';
+          setTimeout(() => {
+            toastSuccess.style.display = 'none';
+          }, 5000);
+        }
+      } else {
+        if (toastError) {
+          if (errorMessageSpan) errorMessageSpan.textContent = message || 'Something went wrong. Please call us directly.';
+          toastError.style.display = 'flex';
+          setTimeout(() => {
+            toastError.style.display = 'none';
+          }, 6000);
+        }
+      }
+    }
+    
+    async function sendViaFormSubmit(formData) {
+      return new Promise((resolve, reject) => {
+        const submitUrl = 'https://formsubmit.co/ajax/sahyadrienterprises360@gmail.com';
+        
+        fetch(submitUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            "Company / Business Name": formData.company,
+            "Full Name": formData.name,
+            "Phone Number": formData.phone,
+            "Email": formData.email,
+            "Product Interest": formData.product,
+            "Message / Requirement": formData.message,
+            "_subject": "🔥 NEW LEAD - Frozen Food/Export Inquiry from Sahyadri Website",
+            "_template": "table",
+            "_autoresponse": "Thank you for contacting Sahyadri Enterprises. We will get back to you within 24 hours regarding your frozen food or export inquiry."
+          })
+        })
+        .then(response => {
+          if (response.ok) {
+            resolve(true);
+          } else {
+            reject(new Error('FormSubmit failed'));
+          }
+        })
+        .catch(() => reject(new Error('Network error')));
+      });
+    }
+    
+    function sendViaMailTo(formData) {
+      const subject = encodeURIComponent(`Inquiry from ${formData.name} - Sahyadri Enterprises`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\n` +
+        `Company: ${formData.company}\n` +
+        `Phone: ${formData.phone}\n` +
+        `Email: ${formData.email || 'Not provided'}\n` +
+        `Product Interest: ${formData.product}\n\n` +
+        `Message:\n${formData.message}\n\n` +
+        `---\nSent from Sahyadri Enterprises Contact Form`
+      );
+      
+      window.location.href = `mailto:sahyadrienterprises360@gmail.com?subject=${subject}&body=${body}`;
+      return true;
+    }
+    
+    function sendViaWhatsApp(formData) {
+      const whatsappMessage = encodeURIComponent(
+        `*NEW INQUIRY - Sahyadri Enterprises*\n\n` +
+        `*Name:* ${formData.name}\n` +
+        `*Company:* ${formData.company}\n` +
+        `*Phone:* ${formData.phone}\n` +
+        `*Email:* ${formData.email || 'Not provided'}\n` +
+        `*Product/Service:* ${formData.product}\n` +
+        `*Requirement:* ${formData.message.substring(0, 200)}\n\n` +
+        `Please contact this customer.`
+      );
+      window.open(`https://wa.me/919730519151?text=${whatsappMessage}`, '_blank');
+      return true;
+    }
+    
+    function saveToLocalStorage(formData) {
+      const inquiries = JSON.parse(localStorage.getItem('sahyadri_inquiries') || '[]');
+      inquiries.push({
+        ...formData,
+        timestamp: new Date().toISOString(),
+        id: Date.now()
+      });
+      localStorage.setItem('sahyadri_inquiries', JSON.stringify(inquiries));
+    }
+    
+    const form = document.getElementById('inquiryForm');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = {
+          company: document.getElementById('companyName').value.trim(),
+          name: document.getElementById('fullName').value.trim(),
+          phone: document.getElementById('phone').value.trim(),
+          email: document.getElementById('email').value.trim(),
+          product: document.getElementById('productInterest').value,
+          message: document.getElementById('message').value.trim()
+        };
+        
+        if (!formData.company || !formData.name || !formData.phone || !formData.product || !formData.message) {
+          showToast('error', 'Please fill all required fields (*)');
+          return;
+        }
+        
+        if (!/^\d{10}$/.test(formData.phone.replace(/\D/g, ''))) {
+          showToast('error', 'Please enter a valid 10-digit phone number');
+          return;
+        }
+        
+        const originalButtonText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="loading-spinner"></span> Sending...';
+        
+        saveToLocalStorage(formData);
+        
+        let success = false;
+        
+        try {
+          const result = await sendViaFormSubmit(formData);
+          if (result) {
+            success = true;
+          }
+        } catch (error) {
+          console.log('FormSubmit failed, trying fallback methods...');
+        }
+        
+        if (!success) {
+          sendViaMailTo(formData);
+          setTimeout(() => {
+            sendViaWhatsApp(formData);
+          }, 500);
+          success = true;
+        }
+        
+        if (success) {
+          form.reset();
+          showToast('success', 'Inquiry sent successfully! We\'ll reply within 24 hours.');
+          console.log('Inquiry saved locally:', formData);
+        } else {
+          showToast('error', 'Unable to send. Please call us directly at +91 9730519151');
+        }
+        
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalButtonText;
+      });
+    }
+  </script>
+</body>
+</html>

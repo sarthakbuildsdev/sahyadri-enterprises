@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Sahyadri Enterprises - Frozen Food Wholesaler</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G82D3PQWJL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G82D3PQWJL');
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+    .whatsapp-float { position: fixed; bottom: 28px; right: 28px; background: linear-gradient(135deg, #25D366, #128C7E); color: white; border-radius: 60px; padding: 12px 24px; display: flex; align-items: center; gap: 12px; font-weight: 700; z-index: 99; text-decoration: none; box-shadow: 0 10px 20px rgba(0,0,0,0.25); }
+    .whatsapp-float:hover { transform: scale(1.05); }
+    @media (max-width: 580px) { .whatsapp-float span { display: none; } .whatsapp-float { padding: 12px; border-radius: 50%; } }
+    .product-img-detail { width: 100%; height: 100%; object-fit: cover; }
+    
+    /* Black Navigation Bar Styles */
+    .black-navbar { background-color: #000000 !important; }
+    .nav-link { color: #ffffff !important; transition: all 0.2s ease; font-weight: 500; padding-bottom: 4px; border-bottom: 2px solid transparent; }
+    .nav-link:hover { color: #fbbf24 !important; border-bottom-color: #fbbf24; }
+    .nav-link-active { border-bottom: 2px solid #fbbf24; color: #fbbf24 !important; font-weight: 600; }
+    .mobile-menu-black { background-color: #000000 !important; }
+    .mobile-menu-black a { color: #ffffff !important; font-weight: 500; }
+    .mobile-menu-black a:hover { color: #fbbf24 !important; padding-left: 4px; }
+    .black-navbar { box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+  </style>
+</head>
+<body>
+
+  <!-- BLACK NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 black-navbar shadow-md">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-2">
+          <h1 class="text-2xl md:text-3xl font-extrabold text-white">Sahyadri <span class="text-amber-400">Enterprises</span></h1>
+        </a>
+      </div>
+      <nav class="hidden md:flex space-x-8 font-medium">
+        <a href="index.html" class="nav-link transition">Home</a>
+        <a href="products.html" class="nav-link transition">Products</a>
+        <a href="about.html" class="nav-link transition">About Us</a>
+        <a href="contact.html" class="nav-link transition">Contact</a>
+      </nav>
+      <button id="mobileMenuBtn" class="md:hidden text-2xl text-white focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden mobile-menu-black border-t border-gray-700 px-6 pb-5 pt-3 flex flex-col gap-3">
+      <a href="index.html" class="py-2 text-white hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-home w-5"></i> Home</a>
+      <a href="products.html" class="py-2 text-white hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-boxes w-5"></i> Products</a>
+      <a href="about.html" class="py-2 text-white hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-info-circle w-5"></i> About Us</a>
+      <a href="contact.html" class="py-2 text-white hover:text-amber-400 transition flex items-center gap-2"><i class="fas fa-envelope w-5"></i> Contact</a>
+    </div>
+  </header>
+
+  <section class="py-16 bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="bg-white rounded-3xl shadow-xl overflow-hidden" id="productDetailContainer"></div>
+      <div class="text-center mt-8">
+        <a href="products.html" class="text-amber-600 hover:text-amber-800 font-semibold transition"><i class="fas fa-arrow-left"></i> Back to All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPDATED FOOTER - Same style as About Us page -->
+  <footer class="bg-green-900 text-white pt-14 pb-8">
+    <div class="container mx-auto px-6 grid md:grid-cols-4 gap-10">
+      <div><i class="fas fa-snowflake text-2xl text-amber-400 mb-3 block"></i><h3 class="text-xl font-bold">Sahyadri Enterprises</h3><p class="text-green-200 text-sm mt-2">Wholesale frozen food experts & export facilitators since 2025.</p><p class="text-green-200 text-sm mt-1">From Your Farm → To The World</p></div>
+      <div><h4 class="font-bold text-lg mb-3">Quick Links</h4><ul class="space-y-2 text-green-200"><li><a href="index.html" class="hover:text-amber-300">Home</a></li><li><a href="products.html" class="hover:text-amber-300">Products</a></li><li><a href="about.html" class="hover:text-amber-300">About</a></li><li><a href="contact.html" class="hover:text-amber-300">Contact</a></li></ul></div>
+      <div><h4 class="font-bold text-lg mb-3">Contact</h4><p class="text-green-200"><i class="fas fa-phone mr-2"></i> +91 9730519151</p><p class="text-green-200"><i class="fas fa-envelope mr-2"></i> sahyadrienterprises360@gmail.com</p><p class="text-green-200 text-sm mt-2"><i class="fas fa-clock mr-2"></i> 24 Hours</p></div>
+      <div><h4 class="font-bold text-lg mb-3">Follow Us</h4><div class="flex gap-4 text-2xl"><i class="fab fa-facebook hover:text-amber-400 cursor-pointer"></i><i class="fab fa-instagram hover:text-amber-400 cursor-pointer"></i></div><div class="mt-4 text-green-200 text-sm"><i class="fas fa-check-circle text-amber-400"></i> Verified Global Buyers Network</div></div>
+    </div>
+    <div class="text-center text-green-300 text-sm border-t border-green-800 mt-10 pt-6">© 2025 Sahyadri Enterprises – Premium Frozen Food Wholesaler & Export Connector. All rights reserved.</div>
+  </footer>
+
+  <a href="https://wa.me/919730519151?text=Hello%20Sahyadri%20Enterprises%2C%20I'm%20interested%20in%20bulk%20frozen%20products." class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp fa-2x"></i><span> Enquire on WhatsApp</span></a>
+
+  <script>
+    // Image folder path
+    const IMAGE_FOLDER = "product-images/";
+    
+    // COMPLETE PRODUCT DATABASE - ALL 92 PRODUCTS WITH UNIQUE IDs (including Custard Apple)
+    const productsDB = {
+      // ==============================================
+      // 1. FROZEN FRUITS (IDs: 1,5,9,10,11,12,13,14,25)
+      // ==============================================
+      1: { name: "Frozen Mango Pulp", shortDesc: "Alphonso & Kesar variety", desc: "Premium quality pulp, no added sugar, ideal for juice, ice creams & desserts. Rich aroma and authentic taste. Available in Alphonso & Kesar varieties. Packed hygienically.", packaging: "1kg, 5kg, 25kg aseptic bags", storage: "-18°C", shelf: "24 months", quality: "FSSAI, BRC Certified", availability: "In Stock (Bulk Quantity)", usage: "Juices, Mango shakes, Bakery, Ice Cream, Smoothies", imageName: "mango.jpeg" },
+      5: { name: "Frozen Strawberry Pulp", shortDesc: "Aromatic puree", desc: "Perfect for smoothies, yogurts, bakery. No artificial preservatives. Sweet aromatic strawberry puree made from fresh strawberries.", packaging: "1kg, 5kg", storage: "-18°C", shelf: "18 months", quality: "Natural, No added sugar", availability: "Seasonal Stock", usage: "Smoothies, Desserts, Jam, Ice Cream", imageName: "straw.png" },
+      9: { name: "Frozen Banana Slices", shortDesc: "Sweet frozen banana slices", desc: "Perfect for smoothies, baking, and desserts. Naturally sweet and creamy.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Smoothies, Ice Cream, Baking", imageName: "banana.webp" },
+      10: { name: "Frozen Apple Slices", shortDesc: "Crispy frozen apple pieces", desc: "Fresh apple slices, perfect for pies and desserts.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Pies, Desserts, Smoothies", imageName: "apple.avif" },
+      11: { name: "Frozen Pineapple Chunks", shortDesc: "Sweet & tangy pineapple", desc: "Ripe pineapple chunks, great for juices and fruit salads.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Juices, Fruit Salads, Desserts", imageName: "pinnea.png" },
+      12: { name: "Frozen Mixed Berries", shortDesc: "Blueberry, raspberry, strawberry mix", desc: "Premium mixed berries for smoothies and desserts.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Smoothies, Desserts, Breakfast Bowls", imageName: "berri.webp" },
+      13: { name: "Frozen Papaya Chunks", shortDesc: "Ripe frozen papaya", desc: "Sweet papaya chunks for smoothies and fruit preparations.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Smoothies, Fruit Salads", imageName: "papaya.png" },
+      14: { name: "Frozen Guava Pulp", shortDesc: "Natural guava puree", desc: "Sweet and tangy guava pulp for juices and desserts.", packaging: "1kg, 5kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Juices, Desserts, Ice Cream", imageName: "guva.webp" },
+      25: { name: "Frozen Custard Apple Pulp", shortDesc: "Sweet custard apple puree", desc: "Premium quality custard apple pulp (Sitaphal) made from ripe, hand-selected custard apples. Naturally sweet, creamy texture with authentic tropical flavor. No added sugar or preservatives. Perfect for desserts, shakes, ice creams, and bakery fillings.", packaging: "500g, 1kg, 5kg aseptic bags", storage: "-18°C", shelf: "24 months", quality: "Premium, Natural, No Preservatives", availability: "Seasonal Stock", usage: "Ice Cream, Milkshakes, Desserts, Mousses, Bakery Fillings", imageName: "custard.webp" },
+      
+      // ==============================================
+      // 2. FROZEN VEGETABLES (IDs: 2,3,4,7,8,15,16,17,18,19,20,21,22,23,24)
+      // ==============================================
+      2: { name: "Frozen Green Peas", shortDesc: "Sweet, tender peas", desc: "Individually quick frozen, garden-fresh taste. Non-GMO, naturally sweet.", packaging: "500g, 1kg, 2.5kg, 10kg bulk", storage: "-18°C", shelf: "24 months", quality: "Non-GMO, ISO", availability: "High Volume", usage: "Curries, Pulao, Fried Rice, Snacks", imageName: "green.jpeg" },
+      3: { name: "Frozen Sweet Corn", shortDesc: "Crunchy golden corn", desc: "Non-GMO, perfect for pizzas, salads & soups.", packaging: "500g, 1kg, 5kg", storage: "-18°C", shelf: "24 months", quality: "Premium Export Grade", availability: "Round year", usage: "Salads, Pizza, Soup, Mixed Vegetables", imageName: "sweet.jpeg" },
+      4: { name: "Frozen Mixed Vegetables", shortDesc: "Peas, Corn, Carrots, Beans", desc: "Uniform cut, ready-to-cook blend. Time-saving and nutritious mix.", packaging: "1kg, 2.5kg, 10kg", storage: "-18°C", shelf: "24 months", quality: "HACCP Certified", availability: "Bulk", usage: "Stir Fry, Pulao, Soup, Fried Rice", imageName: "mix.jpg" },
+      7: { name: "Frozen Spinach", shortDesc: "Chopped spinach", desc: "Blanched & deep frozen, retains vibrant color and nutrients.", packaging: "400g, 1kg, 5kg", storage: "-18°C", shelf: "24 months", quality: "Organic grade", availability: "In Stock", usage: "Palak dishes, Smoothies, Soup", imageName: "spinach.jpeg" },
+      8: { name: "Frozen Cauliflower", shortDesc: "Fresh florets", desc: "Pre-cleaned, uniform sizes, excellent for curries.", packaging: "500g, 1kg, 5kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "Available", usage: "Curries, Manchurian, Rice", imageName: "cauli.jpeg" },
+      15: { name: "Frozen Broccoli Florets", shortDesc: "Premium broccoli pieces", desc: "Fresh frozen broccoli, perfect for stir-fries and soups.", packaging: "400g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Stir Fry, Soups, Pasta", imageName: "brocolio.jpeg" },
+      16: { name: "Frozen Carrot Dices", shortDesc: "Sweet diced carrots", desc: "Uniformly diced carrots for quick cooking.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Curries, Soups, Mixed Vegetables", imageName: "carrot.jpeg" },
+      17: { name: "Frozen Green Beans", shortDesc: "Cut french beans", desc: "Fresh cut green beans, ready to cook.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Curries, Stir Fry, Salads", imageName: "beans.jpg" },
+      18: { name: "Frozen Capsicum Strips", shortDesc: "Green & red capsicum mix", desc: "Mixed capsicum strips for pizzas and stir-fries.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Pizza, Stir Fry, Salads", imageName: "capsicum.jpeg" },
+      19: { name: "Frozen Onion Dices", shortDesc: "Chopped onions", desc: "Ready-to-use diced onions, saves preparation time.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Curries, Fried Rice, Soups", imageName: "onion.jpg" },
+      20: { name: "Frozen Garlic Paste", shortDesc: "Ready-to-use garlic", desc: "Fresh frozen garlic paste for easy cooking.", packaging: "200g, 500g", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Curries, Marinades, Gravies", imageName: "garlic.webp" },
+      21: { name: "Frozen Ginger Paste", shortDesc: "Fresh ginger paste", desc: "Pure ginger paste, ready to use.", packaging: "200g, 500g", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Curries, Tea, Gravies", imageName: "ginger.jpg" },
+      22: { name: "Frozen Ladyfinger", shortDesc: "Cut okra for curries", desc: "Fresh cut okra, perfect for bhindi masala.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Curries, Stir Fry", imageName: "okra.jpg" },
+      23: { name: "Frozen Brinjal Slices", shortDesc: "Eggplant slices", desc: "Sliced brinjal for baingan bharta and curries.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Curries, Baingan Bharta", imageName: "brinjal.jpg" },
+      24: { name: "Frozen Bitter Gourd", shortDesc: "Sliced karela", desc: "Fresh bitter gourd slices for healthy preparations.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Karela Fry, Curries", imageName: "bitter.webp" },
+      
+      // ==============================================
+      // 3. FROZEN PULPS & PUREES (IDs: 26,27,28,29,30,44)
+      // ==============================================
+      44: { name: "Frozen Guava Pulp", shortDesc: "Natural guava puree", desc: "Sweet and tangy guava pulp for juices and desserts.", packaging: "1kg, 5kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Juices, Desserts, Ice Cream", imageName: "pink.png" },
+      26: { name: "Frozen Tomato Pulp", shortDesc: "Rich tomato puree", desc: "Concentrated tomato pulp for gravies and soups.", packaging: "1kg, 5kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Gravies, Soups, Sauces", imageName: "tomato.jpg" },
+      27: { name: "Frozen Tamarind Pulp", shortDesc: "Sour tamarind paste", desc: "Natural tamarind pulp for sambar and chutneys.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Sambar, Chutneys, Curries", imageName: "tam.webp" },
+      28: { name: "Frozen Chilli Paste", shortDesc: "Green chilli paste", desc: "Fresh green chilli paste for spicy dishes.", packaging: "200g, 500g", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Curries, Marinades", imageName: "chilli.webp" },
+      29: { name: "Frozen Coconut Milk", shortDesc: "Pure coconut milk", desc: "Rich and creamy coconut milk for curries.", packaging: "200ml, 500ml", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Curries, Desserts, Beverages", imageName: "coc.webp" },
+      30: { name: "Frozen Lemon Juice", shortDesc: "Fresh frozen lemon", desc: "Pure lemon juice, perfect for beverages and cooking.", packaging: "200ml, 500ml", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Beverages, Marinades, Salads", imageName: "lemon.webp" },
+      
+      // ==============================================
+      // 4. FRESH PRODUCE (IDs: 113,114,115,116,117)
+      // ==============================================
+      113: { name: "Fresh Onion", shortDesc: "Fresh whole onions", desc: "Premium quality fresh whole onions, carefully selected and sourced from trusted farms. Perfect for daily cooking, salads, curries, and frying.", packaging: "5kg, 10kg, 25kg mesh bags", storage: "Cool & Dry Place (10-15°C)", shelf: "30 days", quality: "Premium Grade, Chemical-Free", availability: "In Stock", usage: "Curries, Salads, Frying, Daily Cooking", imageName: "oni.webp" },
+      114: { name: "Fresh Garlic", shortDesc: "Fresh whole garlic", desc: "High-quality fresh garlic bulbs with strong aroma and flavor. Perfect for Indian cooking, pastes, and seasonings.", packaging: "1kg, 5kg, 10kg mesh bags", storage: "Cool & Dry Place (10-15°C)", shelf: "60 days", quality: "Premium Grade", availability: "In Stock", usage: "Curries, Pastes, Seasonings, Pickles", imageName: "gar.avif" },
+      115: { name: "Fresh Peeled Garlic", shortDesc: "Ready-to-use peeled garlic cloves", desc: "Convenient ready-to-use peeled garlic cloves. Saves time in kitchen preparation. Perfect for restaurants, hotels, and bulk cooking.", packaging: "500g, 1kg, 5kg food-grade pouches", storage: "Refrigerated (2-4°C)", shelf: "15 days refrigerated", quality: "Premium, Preservative-Free", availability: "In Stock", usage: "Curries, Pastes, Gravies, Marinades", imageName: "garl.jpg" },
+      116: { name: "Fresh Potatoes", shortDesc: "Fresh whole potatoes", desc: "Premium quality fresh potatoes, firm and uniform in size. Perfect for boiling, frying, roasting, and mashing.", packaging: "10kg, 25kg, 50kg mesh bags", storage: "Cool & Dry Place (10-15°C)", shelf: "45 days", quality: "Premium Grade", availability: "In Stock", usage: "Curries, Fries, Chips, Mashing, Roasting", imageName: "pot.webp" },
+      117: { name: "Fresh Spices", shortDesc: "Fresh whole spices assortment", desc: "Premium quality fresh whole spices including cumin, coriander, black pepper, cardamom, cloves, and more. Sourced from certified farms.", packaging: "500g, 1kg, 5kg as per spice type", storage: "Cool & Dry Place (15-20°C)", shelf: "12 months", quality: "Premium, Chemical-Free", availability: "In Stock", usage: "Curries, Biryani, Garam Masala, Tea, Seasonings", imageName: "spices.webp" },
+      
+      // ==============================================
+      // 5. FROZEN MOMOS (IDs: 201,202,203,204,205,206,207,607)
+      // ==============================================
+      201: { name: "Veg Momos Half Moon", shortDesc: "Classic veg momos", desc: "Traditional half-moon shaped vegetable momos filled with finely chopped cabbage, carrots, and spring onions. Steamed to perfection.", packaging: "500g, 1kg", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Steamed, Fried, Party Snacks", imageName: "mom.webp" },
+      202: { name: "Fried Veg Kurkure Momos", shortDesc: "Crispy fried veg momos", desc: "Crispy fried vegetable momos with a crunchy outer layer and juicy vegetable filling. Perfect for parties and quick snacks.", packaging: "500g, 1kg", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Deep Fry, Air Fry, Party Snacks", imageName: "fry.jpg" },
+      203: { name: "Corn Cheese Momos", shortDesc: "Corn & cheese filled", desc: "Delicious momos filled with sweet corn and creamy cheese. A fusion favorite for all age groups.", packaging: "500g, 1kg", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Steamed, Fried, Kids Favorite", imageName: "cor.png" },
+      204: { name: "Paneer Momos", shortDesc: "Cottage cheese momos", desc: "Rich and creamy paneer momos with mild Indian spices. Perfect for those who love cottage cheese.", packaging: "500g, 1kg", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Steamed, Fried, Party Appetizers", imageName: "pan.jpg" },
+      205: { name: "Schezwan Momos", shortDesc: "Spicy Schezwan flavor", desc: "Spicy Schezwan style momos with a fiery red filling. Perfect for spice lovers.", packaging: "500g, 1kg", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Steamed, Fried, Spicy Snacks", imageName: "sch.png" },
+      206: { name: "Spinach Corn Momos", shortDesc: "Healthy spinach corn", desc: "Healthy momos made with fresh spinach and sweet corn. Nutritious and delicious.", packaging: "500g, 1kg", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Steamed, Healthy Snack", imageName: "spi.jpg" },
+      207: { name: "Fried Chicken Kurkure Momos", shortDesc: "Crispy chicken momos", desc: "Crispy fried chicken momos with a juicy chicken filling and crunchy coating. A non-veg delight.", packaging: "500g, 1kg", storage: "-18°C", shelf: "12 months", quality: "Premium, HALAL", availability: "In Stock", usage: "Deep Fry, Air Fry, Party Snacks", imageName: "chi.jpg" },
+      607: { name: "Chicken Momos", shortDesc: "Juicy chicken momos", desc: "Juicy chicken momos with a flavorful minced chicken filling.", packaging: "500g, 1kg", storage: "-18°C", shelf: "12 months", quality: "Premium, HALAL", availability: "In Stock", usage: "Steamed, Fried, Party Snacks", imageName: "ste.jpg" },
+      608: { name: "Afghani Malai Veg Marinade", shortDesc: "Creamy Afghani malai marinade", desc: "Rich and creamy Afghani malai marinade for vegetarian products, delivering a delicious, mildly spiced flavor and a soft, tender texture.", packaging: "500g, 1kg", storage: "-18°C", shelf: "12 months", quality: "Premium, Vegetarian", availability: "In Stock", usage: "Marination, Grilling, Tandoori Dishes, Veg Chaap, Paneer Tikka", imageName: "chaap.jpg" },
+      609: { name: "Soya Chaap", shortDesc: "Protein-rich soya chaap", desc: "High-protein soya chaap, perfect for grilling and tandoori dishes. Soft texture and rich flavor.", packaging: "500g, 1kg", storage: "-18°C", shelf: "12 months", quality: "Premium, Vegetarian", availability: "In Stock", usage: "Grilling, Tandoori Dishes, Curries", imageName: "soya.webp" },
+      
+      // ==============================================
+      // 6. FROZEN BAKERY (IDs: 301,302,303,304)
+      // ==============================================
+      301: { name: "Choco Lava Cake", shortDesc: "Gooey chocolate center", desc: "Rich chocolate cake with a gooey molten chocolate center. Microwave and serve for a perfect dessert.", packaging: "6pcs, 12pcs box", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Dessert, Party Sweet", imageName: "cho.jpg" },
+      302: { name: "Walnut Brownie", shortDesc: "Rich walnut brownie", desc: "Fudgy chocolate brownie loaded with crunchy walnut pieces. Perfect with ice cream.", packaging: "6pcs, 12pcs box", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Dessert, Tea Time Snack", imageName: "bro.jpg" },
+      303: { name: "Cheesecake", shortDesc: "Creamy cheesecake", desc: "Creamy and smooth baked cheesecake with a buttery biscuit base. A classic dessert.", packaging: "6pcs, 12pcs box", storage: "-18°C", shelf: "9 months", quality: "Premium", availability: "In Stock", usage: "Dessert, Party Sweet", imageName: "che.jpg" },
+      304: { name: "Garlic Bread", shortDesc: "Butter garlic bread", desc: "Crispy bread topped with butter, garlic, and herbs. Ready to bake.", packaging: "6pcs, 12pcs box", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Side Dish, Snack", imageName: "ga.webp" },
+      
+      // ==============================================
+      // 7. PARATHAS & BREADS (IDs: 401-409)
+      // ==============================================
+      401: { name: "Malabar Paratha 8 Inch", shortDesc: "Kerala style flaky paratha", desc: "Flaky and crispy Malabar paratha, also known as Kerala parotta. Perfect with curries.", packaging: "10pcs, 20pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Breakfast, Lunch, Dinner", imageName: "par.webp" },
+      402: { name: "Laccha Paratha 8 Inch", shortDesc: "Layered laccha paratha", desc: "Multi-layered whole wheat laccha paratha with a flaky texture.", packaging: "10pcs, 20pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Breakfast, Lunch", imageName: "lac.jpg" },
+      403: { name: "Aloo Paratha", shortDesc: "Stuffed potato paratha", desc: "Traditional stuffed paratha with spiced mashed potato filling.", packaging: "5pcs, 10pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Breakfast, Lunch Box", imageName: "alo.avif" },
+      404: { name: "Tikona Paratha", shortDesc: "Triangular paratha", desc: "Triangular shaped paratha, perfect for dipping in curries and gravies.", packaging: "10pcs, 20pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Breakfast, Dinner", imageName: "tiko.jpg" },
+      405: { name: "Gobi Paratha", shortDesc: "Stuffed cauliflower paratha", desc: "Healthy stuffed paratha with spiced grated cauliflower filling.", packaging: "5pcs, 10pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Breakfast, Healthy Meal", imageName: "gobi.jpg" },
+      406: { name: "Paneer Paratha", shortDesc: "Stuffed cottage cheese paratha", desc: "Rich stuffed paratha with spiced crumbled paneer filling.", packaging: "5pcs, 10pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Breakfast, Weekend Special", imageName: "paner.avif" },
+      407: { name: "Garlic Naan", shortDesc: "Butter garlic naan", desc: "Soft and fluffy naan topped with butter and fresh garlic.", packaging: "5pcs, 10pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Restaurant Style", imageName: "nan.webp" },
+      408: { name: "Tandoori Naan", shortDesc: "Traditional tandoori naan", desc: "Classic tandoori naan, soft and slightly charred.", packaging: "5pcs, 10pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Curry Companion", imageName: "tandoori.avif" },
+      409: { name: "Frozen Chapati", shortDesc: "Whole wheat chapati", desc: "Soft whole wheat chapatis, ready to heat and serve.", packaging: "10pcs, 20pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Daily Meals", imageName: "chapati.webp" },
+      
+      // ==============================================
+      // 8. VEG SNACKS (IDs: 501,502,503,504,505)
+      // ==============================================
+      501: { name: "Punjabi Samosa 80gm", shortDesc: "Large punjabi samosa", desc: "Large size Punjabi samosa with spiced potato and peas filling. Crispy and flaky.", packaging: "10pcs, 20pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Tea Time, Party Snacks", imageName: "punjabi.jpg" },
+      502: { name: "Punjabi Samosa 40gm", shortDesc: "Medium punjabi samosa", desc: "Medium size Punjabi samosa, perfect for quick snacks and small gatherings.", packaging: "20pcs, 40pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Tea Time, Lunch Box", imageName: "40.webp" },
+      503: { name: "Veg Patti Samosa", shortDesc: "Flaky patti samosa", desc: "Crispy patti samosa with a thin flaky outer layer and spicy vegetable filling.", packaging: "20pcs, 40pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Snacks, Party Food", imageName: "pati.jpeg" },
+      504: { name: "Veg Spring Roll", shortDesc: "Crispy veg spring roll", desc: "Crispy spring roll stuffed with finely chopped vegetables and noodles.", packaging: "10pcs, 20pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Appetizers, Party Snacks", imageName: "roll.jpg" },
+      505: { name: "Veg Spring Roll Mini", shortDesc: "Mini spring rolls", desc: "Bite-sized mini spring rolls, perfect for buffets and parties.", packaging: "20pcs, 40pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium", availability: "In Stock", usage: "Party Appetizers", imageName: "mini.webp" },
+      
+      // ==============================================
+      // 9. NON-VEG SNACKS (IDs: 601,602,603,604,605,606)
+      // ==============================================
+      601: { name: "Chicken Patti Samosa", shortDesc: "Chicken filled samosa", desc: "Crispy samosa filled with spicy minced chicken filling. A non-veg delight.", packaging: "10pcs, 20pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium, HALAL", availability: "In Stock", usage: "Tea Time, Party Snacks", imageName: "chick.webp" },
+      602: { name: "Chicken Spring Roll", shortDesc: "Crispy chicken roll", desc: "Crispy spring roll filled with shredded chicken and vegetables.", packaging: "10pcs, 20pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium, HALAL", availability: "In Stock", usage: "Appetizers, Party Snacks", imageName: "spr.jpg" },
+      603: { name: "Chicken Burger Patty", shortDesc: "Juicy chicken patty", desc: "Juicy and flavorful chicken patty, perfect for burgers.", packaging: "10pcs, 20pcs pack", storage: "-18°C", shelf: "12 months", quality: "Premium, HALAL", availability: "In Stock", usage: "Burgers, Sandwiches", imageName: "patty.webp" },
+      604: { name: "Chicken Nuggets", shortDesc: "Crispy chicken nuggets", desc: "Crispy breaded chicken nuggets, kids' favorite snack.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium, HALAL", availability: "In Stock", usage: "Snacks, Lunch Box", imageName: "nug.webp" },
+      605: { name: "Chicken Popcorn", shortDesc: "Bite-sized chicken", desc: "Bite-sized crispy chicken popcorn, perfect for parties.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium, HALAL", availability: "In Stock", usage: "Snacks, Party Food", imageName: "pop.avif" },
+      606: { name: "Chicken Strips", shortDesc: "Crispy chicken strips", desc: "Long crispy chicken strips, great with dips.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium, HALAL", availability: "In Stock", usage: "Snacks, Appetizers", imageName: "strip.jpg" },
+      
+      // ==============================================
+      // 10. NON-VEG FROZEN PRODUCTS (IDs: 101-112)
+      // ==============================================
+      101: { name: "Frozen Chicken Breast", shortDesc: "Boneless, skinless chicken breast", desc: "Premium quality boneless chicken breast, individually quick frozen.", packaging: "1kg, 5kg, 10kg bulk", storage: "-18°C", shelf: "24 months", quality: "HALAL, FSSAI Certified", availability: "In Stock", usage: "Grilling, Curries, Stir-fry, Salads", imageName: "chicken.webp" },
+      102: { name: "Frozen Chicken Drumsticks", shortDesc: "Juicy chicken drumsticks", desc: "Tender and juicy chicken drumsticks, perfect for roasting or grilling.", packaging: "1kg, 5kg, 10kg bulk", storage: "-18°C", shelf: "24 months", quality: "HALAL, FSSAI Certified", availability: "In Stock", usage: "Roasting, Frying, Grilling, Party Snacks", imageName: "drum.jpg" },
+      103: { name: "Frozen Chicken Thighs", shortDesc: "Boneless chicken thighs", desc: "Flavorful boneless chicken thighs, ideal for curries and BBQ.", packaging: "1kg, 5kg, 10kg bulk", storage: "-18°C", shelf: "24 months", quality: "HALAL, FSSAI Certified", availability: "In Stock", usage: "Curries, BBQ, Tacos, Stir-fry", imageName: "thighs.jpg" },
+      104: { name: "Frozen Chicken Wings", shortDesc: "Party chicken wings", desc: "Perfect party wings for baking, frying, or grilling.", packaging: "1kg, 5kg, 10kg bulk", storage: "-18°C", shelf: "24 months", quality: "HALAL, FSSAI Certified", availability: "In Stock", usage: "Appetizers, Party Snacks, Frying, Baking", imageName: "wins.jpg" },
+      105: { name: "Frozen Chicken Curry Cut", shortDesc: "Medium size curry pieces", desc: "Ready-to-cook chicken curry pieces with bone.", packaging: "1kg, 5kg, 10kg bulk", storage: "-18°C", shelf: "24 months", quality: "HALAL, FSSAI Certified", availability: "In Stock", usage: "Chicken Curry, Biryani, Stews", imageName: "cut.webp" },
+      106: { name: "Frozen Chicken Nuggets", shortDesc: "Crispy chicken nuggets", desc: "Pre-cooked, breaded chicken nuggets.", packaging: "500g, 1kg, 2kg", storage: "-18°C", shelf: "24 months", quality: "Premium Quality", availability: "In Stock", usage: "Snacks, Kids Lunch Box, Fast Food", imageName: "nug.webp" },
+      107: { name: "Frozen Chicken Popcorn", shortDesc: "Bite-sized chicken pops", desc: "Bite-sized breaded chicken pieces.", packaging: "500g, 1kg, 2kg", storage: "-18°C", shelf: "24 months", quality: "Premium Quality", availability: "In Stock", usage: "Snacks, Appetizers, Party Food", imageName: "pop.avif" },
+      108: { name: "Frozen Chicken Sausages", shortDesc: "Premium chicken sausages", desc: "High-quality chicken sausages, perfect for breakfast.", packaging: "500g, 1kg, 5kg", storage: "-18°C", shelf: "24 months", quality: "Premium Quality", availability: "In Stock", usage: "Breakfast, Sandwiches, Pasta, Pizza", imageName: "saus.webp" },
+      109: { name: "Frozen Fish Fillets", shortDesc: "Boneless Basa/Tilapia fillets", desc: "Premium boneless fish fillets, mild flavor, firm texture.", packaging: "500g, 1kg, 5kg", storage: "-18°C", shelf: "24 months", quality: "Export Quality, FSSAI", availability: "In Stock", usage: "Fish Fry, Curry, Baking, Steaming", imageName: "fish.avif" },
+      110: { name: "Frozen Prawns", shortDesc: "Medium size cleaned prawns", desc: "Premium quality medium-sized prawns, cleaned and de-veined.", packaging: "500g, 1kg, 5kg", storage: "-18°C", shelf: "24 months", quality: "Export Quality", availability: "In Stock", usage: "Prawn Curry, Fried Rice, Appetizers", imageName: "prawn.jpg" },
+      111: { name: "Frozen Squid Rings", shortDesc: "Tender squid rings", desc: "Tender squid rings, cleaned and ready to cook.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium Quality", availability: "In Stock", usage: "Calamari Rings, Pasta, Stir-fry", imageName: "squid.jpg" },
+      112: { name: "Frozen Chicken Harra Bhara Kabab", shortDesc: "Healthy chicken & spinach kabab", desc: "Healthy chicken and spinach kababs with herbs and spices.", packaging: "500g, 1kg, 5kg", storage: "-18°C", shelf: "24 months", quality: "HALAL, FSSAI Certified", availability: "In Stock", usage: "Appetizers, Party Snacks, Starter, BBQ", imageName: "kab.webp" },
+      
+      // ==============================================
+      // 11. READY-TO-COOK & SNACKS (IDs: 6,31,32,33,34,35,36,37,38,39,40,43)
+      // ==============================================
+      6: { name: "Frozen French Fries", shortDesc: "Crispy fry cuts", desc: "Pre-fried, excellent for restaurants & fast food chains.", packaging: "1kg, 2kg, 15kg bulk", storage: "-18°C", shelf: "24 months", quality: "Premium Potato", availability: "High", usage: "Snacks, Fast food, Burger sides", imageName: "french.webp" },
+      31: { name: "Frozen Potato Wedges", shortDesc: "Spiced wedges", desc: "Seasoned potato wedges, ready to bake or fry.", packaging: "1kg, 2kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Snacks, Appetizers", imageName: "potato.jpeg" },
+      32: { name: "Frozen Onion Rings", shortDesc: "Crunchy onion rings", desc: "Breaded onion rings, crispy and delicious.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Snacks, Burger Sides", imageName: "ring.webp" },
+      33: { name: "Frozen Veg Nuggets", shortDesc: "Vegetable nuggets", desc: "Mixed vegetable nuggets, perfect for kids.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Snacks, Lunch Box", imageName: "nuggest.jpg" },
+      34: { name: "Frozen Spring Rolls", shortDesc: "Veg spring rolls", desc: "Crispy vegetable spring rolls with dipping sauce.", packaging: "250g, 500g", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Snacks, Party Appetizers", imageName: "spring.jpg" },
+      35: { name: "Frozen Samosa", shortDesc: "Punjabi samosa", desc: "Crispy samosa with spiced potato filling.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Snacks, Tea Time", imageName: "samosa.webp" },
+      36: { name: "Frozen Pizza Base", shortDesc: "Readymade pizza base", desc: "Soft and ready-to-top pizza base.", packaging: "200g, 500g", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Pizza, Garlic Bread", imageName: "pizza.avif" },
+      37: { name: "Frozen Paratha", shortDesc: "Whole wheat paratha", desc: "Flaky whole wheat paratha, ready to heat.", packaging: "300g, 500g", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Breakfast, Lunch", imageName: "paratha.webp" },
+      38: { name: "Frozen Chapati", shortDesc: "Roti/chapati", desc: "Soft whole wheat chapatis, ready to reheat.", packaging: "300g, 500g", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Daily Meals", imageName: "chapati.webp" },
+      39: { name: "Frozen Cutlet", shortDesc: "Veg cutlet", desc: "Spiced vegetable cutlets, ready to fry.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Snacks, Appetizers", imageName: "cutlet.jpeg" },
+      40: { name: "Frozen Hara Bhara Kabab", shortDesc: "Spinach kabab", desc: "Healthy spinach and green peas kabab.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Snacks, Party Appetizers", imageName: "kabab.jpg" },
+      43: { name: "Frozen Cheese Nuggets", shortDesc: "Cheese filled nuggets", desc: "Crispy cheese filled nuggets, kids favorite.", packaging: "500g, 1kg", storage: "-18°C", shelf: "24 months", quality: "Premium", availability: "In Stock", usage: "Snacks, Party Appetizers", imageName: "cheese.jpg" }
+    };
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+    const product = productsDB[productId];
+    const container = document.getElementById('productDetailContainer');
+    
+    if (product) {
+      const imagePath = IMAGE_FOLDER + product.imageName;
+      container.innerHTML = `
+        <div class="p-8 md:p-10">
+          <div class="h-96 bg-gray-200 rounded-2xl flex items-center justify-center mb-6 overflow-hidden relative">
+            <img class="product-img-detail w-full h-full object-cover" src="${imagePath}" alt="${product.name}" 
+                 onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\\'fas fa-snowflake text-8xl text-gray-400\\'></i>'; this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center';">
+          </div>
+          <h1 class="text-3xl md:text-4xl font-bold text-green-800">${product.name}</h1>
+          <p class="text-gray-500 mt-2">${product.shortDesc}</p>
+          <div class="mt-8 grid md:grid-cols-2 gap-6">
+            <div class="space-y-3"><p><i class="fas fa-box w-6 text-amber-600"></i> <strong>Packaging Sizes:</strong> ${product.packaging}</p><p><i class="fas fa-thermometer-half w-6 text-amber-600"></i> <strong>Storage Temperature:</strong> ${product.storage}</p><p><i class="fas fa-calendar-alt w-6 text-amber-600"></i> <strong>Shelf Life:</strong> ${product.shelf}</p><p><i class="fas fa-check-circle w-6 text-amber-600"></i> <strong>Quality Standards:</strong> ${product.quality}</p></div>
+            <div class="space-y-3"><p><i class="fas fa-truck w-6 text-amber-600"></i> <strong>Availability:</strong> ${product.availability}</p><p><i class="fas fa-utensils w-6 text-amber-600"></i> <strong>Usage Applications:</strong> ${product.usage}</p></div>
+          </div>
+          <div class="mt-8 p-5 bg-gray-50 rounded-xl"><p class="text-gray-700 leading-relaxed"><strong>Product Description:</strong> ${product.desc}</p></div>
+          <div class="mt-8 flex flex-wrap gap-4"><a href="contact.html" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-bold transition"><i class="fas fa-envelope"></i> Get Wholesale Price</a><a href="https://wa.me/919730519151?text=I'm%20interested%20in%20${encodeURIComponent(product.name)}%20for%20wholesale" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-bold transition"><i class="fab fa-whatsapp"></i> WhatsApp Inquiry</a></div>
+        </div>
+      `;
+    } else {
+      container.innerHTML = `<div class="p-8 text-center"><i class="fas fa-exclamation-triangle text-6xl text-amber-500 mb-4"></i><h2 class="text-2xl font-bold">Product not found</h2><a href="products.html" class="text-amber-600 mt-4 inline-block font-semibold">← Back to Products</a></div>`;
+    }
+    
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if(menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+    }
+  </script>
+</body>
+</html>
